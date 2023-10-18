@@ -1,0 +1,144 @@
+.achievementsMain{
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    background-image: url("../../img/bg5.jpg");
+    background-size: cover; /* This ensures the image covers the entire container */
+    background-position: center; /* Center the image within the container */
+}
+
+
+.achieveOverlay {
+    display: flex;
+    position: relative; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+    z-index: 0; /* Adjust the z-index to ensure it's above other content */
+    pointer-events: none; /* Allows interaction with elements beneath the overlay */
+  }
+  
+
+.achievementLeft{
+    display: flex;
+    flex-direction: row;
+    flex: 6.3;
+    align-items: center;
+    /* background-color: aqua; */
+    justify-content: center;
+}
+.achievementRight{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    justify-content: center;   
+    /* background-color: #d0ced2; */
+}
+
+.statusContainer:hover{
+    transform: scale(1.3);
+    transition: 0.3s ease-in-out;
+}
+.achievementRight img:hover{
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
+}
+
+.statusContainer1{
+    /* background-color: red; */
+    display: flex;
+    height: 25rem;
+    width: 5rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding: 0rem 0rem 2rem 0rem; */
+    /* align-self: flex-start; */
+    /* margin-left: 5rem; */
+}
+
+.statusContainer2{
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    /* width: 5rem; */
+    padding: 1rem;
+    height: 20rem;
+    justify-content: space-evenly;
+   
+}
+.statusTexts{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 0rem 0rem 2rem;
+}
+.statusIcon{
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+.statusHeader{
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--darkBlue);
+}
+
+.statusPara{
+    margin: 0;
+    padding: 0rem 0rem 0rem 0rem;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--darkBlue);
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width:900px) {
+    /* .achievementLeft {
+        display: flex;
+        flex-direction: column;
+        flex: 6.3 1;
+        align-items: center; */
+        /* background-color: aqua; */
+        /* justify-content: center;
+        margin: 2rem 0rem 2rem 0rem;
+    } */
+    .achievementsMain {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 120vh;
+    }
+    /* .statusContainer1{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        align-self: flex-start;
+        margin-left: 2rem;
+    } */
+}
+
+@media screen and (max-width:750px) {
+    
+    /* .achievementLeft {
+        display: flex;
+        flex-direction: column;
+        flex: 6.3 1;
+        align-items: center; */
+        /* background-color: aqua; */
+        /* justify-content: center;
+        margin: 2rem 0rem 2rem 0rem;
+    } */
+    .achievementsMain {
+        display: flex;
+        flex-direction: column;
+        height: 120vh;
+    }
+    /* .statusContainer1{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        align-self: flex-start;
+        margin-left: 2rem;
+    } */
+}

@@ -1,0 +1,107 @@
+.footer{
+    /* background-color: #56326F; */
+    background: linear-gradient(
+        to bottom right,
+        rgba(167, 16, 205, 0.9),
+        rgba(50, 5, 100, 0.7)
+      ),
+      linear-gradient(360deg, #ff5733, #6dab50);
+    color: white;
+    padding: 4rem 6rem;
+
+
+}
+
+.topRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 86%;
+
+}
+
+
+.topRow h1{
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.topRow p{
+    text-align: left;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+.topRow a{
+    text-align: left;
+}
+.topRow i {
+    color: white;
+    padding: 1.2rem;
+    font-size: 3rem;
+    transition: 0.3s ease-in-out; 
+    /* Apply the transition here */
+}
+
+.topRow i:hover {
+    color: bisque;
+    font-size: 4rem;
+}
+
+
+.bottomRow{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    
+
+}
+
+
+.bottomRow h4{
+    text-align: left;
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+}
+
+
+.bottomRow a{
+    text-align: left; 
+    text-decoration: none;  
+    color: wheat;
+    padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+
+}
+
+
+.bottomRow a:hover{
+   color: white;
+
+}
+
+.bottomRow div{
+    /* text-align: left;    */
+    display: flex;
+    flex-direction: column; 
+
+}
+
+@media screen and (max-width:850px) {
+    .footer{
+        padding: 4rem 2rem;
+    }
+    .iconCont{
+        margin-left: -15px;
+    }
+
+    .bottomRow div{
+        width: 50%;
+    }
+    
+}
