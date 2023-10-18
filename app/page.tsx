@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 import Hero from './components/hero/hero';
 import Achievements from './components/achievements/achievements';
 import Gallery from './components/gallery/gallery';
+import ContactUs from './components/contactUs/contactUs';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero/>
       <Achievements/>
       <Gallery/>
+      <ContactUs/>
       <Footer/>
     </main>
   );

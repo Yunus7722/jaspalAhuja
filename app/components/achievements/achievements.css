@@ -1,7 +1,7 @@
 .achievementsMain{
     display: flex;
     flex-direction: row;
-    height: 70vh;
+    height: 25rem;
     background-image: url("../../img/bg5.jpg");
     background-size: cover; /* This ensures the image covers the entire container */
     background-position: center; /* Center the image within the container */

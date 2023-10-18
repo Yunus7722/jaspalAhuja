@@ -53,7 +53,7 @@ function Navbar() {
     <nav className="navbar-Items">
       <h1 className="navbar-Logo">
         {/* <img height={50} src={webLogo} alt="logo" /> */}
-        Jaspal Ahuja
+        Jas Ahuja
       </h1>
       <div className="menu-Icons" onClick={handleClick}>
         <i className={clicked ? "fa-solid fa-bars" : "fa-solid fa-xmark"}></i>
