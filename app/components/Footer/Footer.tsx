@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="topRow">
         <div>
           <h1>Jaspal Singh Ahuja</h1>
-          <p>it's a great adventure in joining us</p>
+          <p>it is a great adventure in joining us</p>
         </div>
         <div className="iconCont">
           <i className="fi fi-brands-linkedin"></i>
