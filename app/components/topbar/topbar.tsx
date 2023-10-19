@@ -56,7 +56,7 @@ function Navbar() {
         Jas Ahuja
       </h1>
       <div className="menu-Icons" onClick={handleClick}>
-        <i className={clicked ? "fa-solid fa-bars" : "fa-solid fa-xmark"}></i>
+        <i className={clicked ? "fi fi-br-menu-burger" : "fi fi-sr-circle-xmark"}></i>
       </div>
 
       <ul className={clicked ? "navbar-Menu" : "navbar-Menu active"}>

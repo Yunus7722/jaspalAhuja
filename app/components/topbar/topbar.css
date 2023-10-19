@@ -111,7 +111,7 @@ button:hover {
 .menu-Icons {
   display: none;
   font-size: 25px;
-  color: #02ff67;
+  color: white;
 }
 
 @media screen and (max-width: 1180px) {
@@ -126,7 +126,12 @@ button:hover {
     /* list-style: none; */
     justify-content: flex-start;
     /* align-items: stretch; */
-    background-color: rgba(65, 70, 63, 0.9);
+    background: linear-gradient(
+      to bottom right,
+      rgba(167, 16, 205, 0.9),
+      rgba(50, 5, 100, 0.7)
+    ),
+    linear-gradient(45deg, #ff5733, #6dab50);
     width: 100%;
     height: auto;
     position: absolute;
@@ -157,7 +162,7 @@ button:hover {
   }
 
   .nav-Links:hover {
-    background-color: #0673ba;
+    background-color: #ea698b;
     transition: none;
   }
 
@@ -178,7 +183,7 @@ button:hover {
 
   .nav-Links-mobile:hover {
     color: white;
-    background-color: black;
+    background-color: #A419AF;
     text-decoration: none;
   }
 
@@ -189,7 +194,7 @@ button:hover {
   .menu-Icons {
     display: block;
     font-size: 25px;
-    color: #02ff67;
+    color: white;
     cursor: pointer;
   }
 }
