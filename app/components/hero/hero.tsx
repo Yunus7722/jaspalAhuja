@@ -87,7 +87,7 @@ export default function Intro() {
           smooth={true}
           spy={true}
           activeClass="activeClass"
-          offset={-window.innerHeight / 8}
+          // offset={-window.innerHeight / 8}
         >
           <div className="button i-button">Get in touch</div>
         </Link>

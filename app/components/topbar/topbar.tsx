@@ -76,7 +76,7 @@ function Navbar() {
               smooth={true}
               spy={true}
               activeClass="activeClass"
-              offset={-window.innerHeight / 8}
+              // offset={-window.innerHeight / 8}
             >
               <a className={item.cName} onClick={handleMenuClick}>
                 {item.title}
