@@ -101,7 +101,21 @@
     }
 
     .bottomRow div{
-        width: 50%;
+        width: 40%;
     }
+
+    
+.topRow i {
+    color: white;
+    padding: 0.8rem;
+    font-size: 2rem;
+    /* transition: 0.3s ease-in-out;  */
+    /* Apply the transition here */
+}
+
+.topRow i:hover {
+    color: bisque;
+    font-size: 2.2rem;
+}
     
 }

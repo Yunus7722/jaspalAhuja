@@ -13,7 +13,7 @@ import img6 from "../../img/jpo6.jpg";
 
 const Trip = () => {
   return (
-    <div className="trip">
+    <div className="trip" id="Gallery">
       <h1 className="underline">Gallery</h1>
       <p>you can discover new destinations from us</p>
       <div className="trip-card-container">

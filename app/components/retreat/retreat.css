@@ -1,0 +1,332 @@
+.retreat-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+  height: 42rem;
+  background-image: url("../../img/bg5.jpg");
+  background-size: cover; /* This ensures the image covers the entire container */
+  background-position: center; /* Center the image within the container */
+}
+
+.retreatHeading {
+  /* padding-left: 2rem; */
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgb(66, 11, 118);
+}
+
+.imgCss {
+  border-radius: 100px;
+  height: 80%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.carousal-container {
+  /* margin-left: 13vw; */
+  align-items: center;
+  display: flex;
+  width: 70vw;
+  height: 100vh;
+  /* border: 10px solid black; */
+  /* border-radius: 100px; */
+  /* height: 100vh; */
+  /* width: 80%; */
+}
+
+.heroMain {
+  display: flex;
+  height: 100vh;
+  /* margin-top: 20px; */
+}
+
+/* Change the color and size of pagination dots */
+.swiper-pagination-bullet {
+  width: 20px !important;
+  height: 5px !important;
+  border-radius: 5px !important;
+  background-color: #dd42a9 !important ;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  margin-left: 20px !important;
+  /* margin-top: 100px !important; */
+}
+
+/* Change the color of active pagination dot */
+.swiper-pagination-bullet-active {
+  background-color: #a943c6 !important;
+  opacity: 1;
+  transform: scale(2);
+}
+/* 
+.imgContainer {
+  position: relative;
+} */
+/* 
+.imgPerfect {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+} */
+
+.overlay-retreat {
+  position: absolute;
+  /* top: 10; */
+  left: 0;
+  width: 100%;
+  height: 42rem;
+  background: radial-gradient(circle at top left, rgb(65, 65, 95), transparent),
+    radial-gradient(circle at top right, rgb(65, 65, 95), transparent),
+    radial-gradient(circle at bottom left, rgb(65, 65, 95), transparent),
+    radial-gradient(circle at bottom right, rgb(65, 65, 95), transparent);
+  opacity: 0.2;
+  /* z-index: 0; */
+}
+
+/* 
+.overlay-retreat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+.radial-gradient-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: radial-gradient(
+    ellipse at top left,
+    rgba(81, 80, 80, 0.389),
+    transparent
+  );
+}
+
+.radial-gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: radial-gradient(ellipse at bottom left, black, transparent);
+}
+
+.radial-gradient-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(ellipse at top left, black, transparent);
+}
+
+.radial-gradient-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(ellipse at top right, black, transparent);
+}
+/* 
+.stackContent {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1;
+} */
+
+.stackText {
+  font-size: 42px;
+  padding: 0rem 4rem;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  font-weight: 600;
+}
+
+.stackText2 {
+  font-size: 42px;
+  padding: 0rem 4rem;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  font-weight: 600;
+}
+
+.learnButton {
+  cursor: pointer;
+  height: 60px;
+  display: inline;
+  font-size: 1.5rem;
+  background-color: #0077b6;
+  font-weight: 600;
+  border-radius: 50px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border: 1px #1ef1dc solid;
+  /* padding: 1rem 2rem; */
+  /* align-items: center; */
+  width: 15%;
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+.learnButton:hover {
+  /* height: 60px; */
+  /* display: inline; */
+  /* font-size: 1.8rem; */
+  background-color: #8f93ac;
+  border: 1px #0077b6 solid;
+  color: white;
+  /* font-weight: 300; */
+  /* font-family: 'Poppins', sans-serif; */
+  border: none;
+}
+
+@media screen and (max-width: 800px) {
+
+  
+.overlay-retreat {
+  position: absolute;
+  /* top: 10; */
+  left: 0;
+  width: 100%;
+  height: 25rem;
+  background: radial-gradient(circle at top left, rgb(65, 65, 95), transparent),
+    radial-gradient(circle at top right, rgb(65, 65, 95), transparent),
+    radial-gradient(circle at bottom left, rgb(65, 65, 95), transparent),
+    radial-gradient(circle at bottom right, rgb(65, 65, 95), transparent);
+  opacity: 0.2;
+  /* z-index: 0; */
+}
+
+  .retreat-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    width: 100%;
+    height: 25rem;
+    background-image: url("../../img/bg5.jpg");
+    background-size: cover; /* This ensures the image covers the entire container */
+    background-position: center; /* Center the image within the container */
+  }
+  
+  .retreatHeading {
+    /* padding-left: 2rem; */
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(66, 11, 118);
+  }
+  
+  .imgCss {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  .carousal-container {
+    /* margin-left: 13vw; */
+    align-items: center;
+    display: flex;
+    width: 90vw;
+    height: 100vh;
+    /* border: 10px solid black; */
+    /* border-radius: 100px; */
+    /* height: 100vh; */
+    /* width: 80%; */
+  }
+  
+  .heroMain {
+    display: flex;
+    height: 100vh;
+    /* margin-top: 20px; */
+  }
+  .stackText {
+    font-size: 30px;
+    padding: 2rem 2.5rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+  }
+
+  .learnButton {
+    cursor: pointer;
+    height: 40px;
+    display: inline;
+    font-size: 1rem;
+    background-color: #0077b6;
+    font-weight: 500;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    /* padding: 1rem 2rem; */
+    /* align-items: center; */
+    width: 40%;
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* .stackText {
+      font-size: 30px;
+      padding: 2rem 3rem;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      width: 60%;
+  } */
+
+  .learnButton {
+    cursor: pointer;
+    height: 40px;
+    /* display: inline; */
+    font-size: 1.2rem;
+    background-color: #0077b6;
+    font-weight: 500;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    /* padding: 1rem 2rem; */
+    /* align-items: center; */
+    width: 30%;
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .stackText {
+    font-size: 30px;
+    padding: 2rem 2rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+  }
+
+  .learnButton {
+    cursor: pointer;
+    height: 40px;
+    display: inline;
+    font-size: 1rem;
+    background-color: #0077b6;
+    font-weight: 500;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    /* padding: 1rem 2rem; */
+    /* align-items: center; */
+    width: 40%;
+    margin-left: 2rem;
+  }
+}

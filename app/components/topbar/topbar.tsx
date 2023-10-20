@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import "./topbar.css";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [clicked, setClicked] = React.useState(true);
@@ -24,28 +25,28 @@ function Navbar() {
       toName: "Home",
     },
     {
-      title: "About Us",
+      title: "Our Feats",
       url: "/",
       cName: "nav-Links",
-      toName: "AboutUs",
+      toName: "Feats",
     },
     {
       title: "Gallery",
       url: "/",
       cName: "nav-Links",
-      toName: "WhoWeAre",
+      toName: "Gallery",
     },
     {
       title: "Retreat",
       url: "/",
       cName: "nav-Links",
-      toName: "Solutions",
+      toName: "Retreat",
     },
     {
       title: "Contact Us",
       url: "/",
       cName: "nav-Links",
-      toName: "ContactUs",
+      toName: "Contact",
     },
   ];
 
@@ -56,16 +57,30 @@ function Navbar() {
         Jas Ahuja
       </h1>
       <div className="menu-Icons" onClick={handleClick}>
-        <i className={clicked ? "fi fi-br-menu-burger" : "fi fi-sr-circle-xmark"}></i>
+        <i
+          className={clicked ? "fi fi-br-menu-burger" : "fi fi-sr-circle-xmark"}
+        ></i>
       </div>
 
       <ul className={clicked ? "navbar-Menu" : "navbar-Menu active"}>
         {menuItems.map((item, index) => (
           <li key={index}>
-            <Link href={item.url}>
-              <span className={item.cName} onClick={handleMenuClick}>
+            <Link
+              activeStyle={{
+                // textDecoration: "none",
+                // borderBottom: "4px solid #2a9d8f",
+                fontWeight: 700,
+                fontFamily: "Poppins, sans-serif",
+              }}
+              to={item.toName}
+              smooth={true}
+              spy={true}
+              activeClass="activeClass"
+              offset={-window.innerHeight / 8}
+            >
+              <a className={item.cName} onClick={handleMenuClick}>
                 {item.title}
-              </span>
+              </a>
             </Link>
           </li>
         ))}

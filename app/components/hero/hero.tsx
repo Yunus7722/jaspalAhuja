@@ -19,7 +19,7 @@ import { useContext } from "react";
 import Image from "next/image";
 
 import { useSpring, animated } from "react-spring";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -61,8 +61,12 @@ export default function Intro() {
           <span>Hi i am </span>
           <span>
             {" "}
-            <Typewriter words={[str1, str2]} loop={10}  typeSpeed={50}
-            deleteSpeed={30}/>
+            <Typewriter
+              words={[str1, str2]}
+              loop={10}
+              typeSpeed={50}
+              deleteSpeed={30}
+            />
           </span>
 
           <p>
@@ -72,8 +76,20 @@ export default function Intro() {
             two decades, helps people to create Financial Freedom.
           </p>
         </div>
-        <Link href={""}>
-          <button className="button i-button">Get in touch</button>
+        <Link
+          activeStyle={{
+            // textDecoration: "none",
+            // borderBottom: "4px solid #2a9d8f",
+            fontWeight: 700,
+            fontFamily: "Poppins, sans-serif",
+          }}
+          to="Contact"
+          smooth={true}
+          spy={true}
+          activeClass="activeClass"
+          offset={-window.innerHeight / 8}
+        >
+          <div className="button i-button">Get in touch</div>
         </Link>
 
         <div className="circular-image-rect">

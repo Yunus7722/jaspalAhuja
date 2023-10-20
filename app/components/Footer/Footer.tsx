@@ -12,10 +12,14 @@ export default function Footer() {
           <p>it is a great adventure in joining us</p>
         </div>
         <div className="iconCont">
-          <i className="fi fi-brands-linkedin"></i>
-          <i className="fi fi-brands-facebook"></i>
-          <i className="fi fi-brands-twitter"></i>
-          <i className="fi fi-brands-discord"></i>
+          <a target="_blank" href="https://www.linkedin.com/in/jaspal-singh-ahuja-a60b6612/">
+            {" "}
+            <i className="fi fi-brands-linkedin"></i>
+          </a>
+
+          <a target="_blank" href=""><i className="fi fi-brands-facebook"></i></a>
+          <a target="_blank" href=""><i className="fi fi-brands-twitter"></i></a>
+          <a target="_blank" href=""><i className="fi fi-brands-discord"></i></a>
         </div>
       </div>
       <div className="bottomRow">
@@ -36,7 +40,7 @@ export default function Footer() {
         <div>
           <h4>Projects</h4>
           <a href="/">support</a>
-          <a href="/">troubleshooting</a>
+          {/* <a href="/">troubleshooting</a> */}
           <a href="/">Contact Us</a>
         </div>
         <div>

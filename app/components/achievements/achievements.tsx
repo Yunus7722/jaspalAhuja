@@ -19,7 +19,7 @@ function Achievements() {
   }, []);
 
   return (
-    <div className="achievementsMain">
+    <div className="achievementsMain" id="Feats">
       <div className="achievementLeft">
         <div className="statusContainer1">
           <div className="statusIcon">

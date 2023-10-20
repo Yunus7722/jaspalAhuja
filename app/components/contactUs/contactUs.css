@@ -12,6 +12,8 @@
   flex: 6;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .contact-right {
@@ -28,7 +30,7 @@
 
 @media screen and (max-width:850px) {
     .button-cont{
-        display: flex;transform: scale(0.6);
+        display: flex;transform: scale(1);
     }
     
     .contact-container {
@@ -46,11 +48,15 @@
 @media screen and (max-width:1000px) {
     .contact-container {
         display: flex;
-        flex-direction: column;
-        height: 85rem;
+        flex-direction: column-reverse;
+        height: 80rem;
         width: 100%;
         background-image: url("../../img/bg5.jpg");
         background-size: cover; /* This ensures the image covers the entire container */
         background-position: center; /* Center the image within the container */
+      }
+
+      .contact-left>* {
+       transform: scale(0.9);
       }
 }

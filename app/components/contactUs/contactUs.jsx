@@ -7,7 +7,7 @@ import img from "../../img/co.png";
 
 function contactUs() {
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="Contact">
       <div className="contact-left">
         {/* <img style={{ width: "100%", height: "100%" }} src={img} alt="" /> */}
         <Image
@@ -82,9 +82,9 @@ function contactUs() {
 
             <Link href={""}>
               <div className="button-cont" style={{ padding: "1rem 0rem 3rem 0rem" }}>
-                <button style={{ width: "100%" }} className="button i-button">
+                <div style={{ width: "100%" }} className="button i-button">
                   <span style={{ fontSize: "25px" }}>Submit</span>
-                </button>
+                </div>
               </div>
             </Link>
           </form>

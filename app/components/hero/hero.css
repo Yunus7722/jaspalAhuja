@@ -7,19 +7,18 @@
   background-position: center; /* Center the image within the container */
 }
 
-
 .overlay {
-    position: absolute; /* Fixed position to cover the entire viewport */
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* 105+70  here adding overlay for throughout*/
-    height: 38rem; 
-    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
-    z-index: 0; /* Adjust the z-index to ensure it's above other content */
-    pointer-events: none; /* Allows interaction with elements beneath the overlay */
-  }
-  
+  position: absolute; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* 105+70  here adding overlay for throughout*/
+  height: 38rem;
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+  z-index: 0; /* Adjust the z-index to ensure it's above other content */
+  pointer-events: none; /* Allows interaction with elements beneath the overlay */
+}
+
 .i-left {
   margin-top: 6rem;
   margin-left: 2rem;
@@ -45,16 +44,28 @@
   font-weight: bold;
 }
 
-.name{
+.name {
   font-size: 3rem;
   color: wheat;
   font-weight: bold;
 }
+/* 
+.circular-image-rect {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
 
 .circular-image-rect {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.circular-image-rect > * {
+  width: calc(50% - 10px); /* Adjust the width as needed with some spacing between images */
+  margin-bottom: 10px; /* Add margin between rows */
 }
 
 .i-name > :nth-child(3) {
@@ -154,7 +165,7 @@
 }
 
 .w-sec-circle:hover {
-    transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
   transform: scale(1.3);
 }
 
@@ -213,27 +224,51 @@
 
 @media screen and (max-width: 800px) {
 
+  
+  .w-sec-circle:hover {
+    /* transition: ease-in-out 0.3s; */
+    transform: scale(1);
+  }
+
+  .overlay {
+    position: absolute; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 105+70  here adding overlay for throughout*/
+    height: 80rem;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.2
+    ); /* Semi-transparent black background */
+    z-index: 0; /* Adjust the z-index to ensure it's above other content */
+    pointer-events: none; /* Allows interaction with elements beneath the overlay */
+  }
+
+  .w-sec-circle {
+    transition: ease-in-out 0.3s;
+    transform: scale(1);
+  }
+  /* .circular-image-rect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  } */
 
   
-.w-sec-circle {
-  transition: ease-in-out 0.3s;
-transform: scale(0.7);
-}
-.circular-image-rect {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
   .intro {
     flex-direction: column;
-    height: 70rem;
+    height: 80rem;
     /* gap: 7rem; */
     width: 100%;
   }
   .i-right {
-    transform: scale(0.6);
+    transform: scale(0.5);
     left: -5rem;
-    top: -5rem;
+    top: -10rem;
+
   }
   .floating-div:nth-of-type(3) {
     transform: none !important;
