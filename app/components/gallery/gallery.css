@@ -1,5 +1,5 @@
 .trip {
-    margin-top: 10rem;
+    
   padding: 2rem 2rem;
   background-image: url("../../img/bg5.jpg");
   background-size: cover; /* This ensures the image covers the entire container */
@@ -94,6 +94,7 @@
 
 @media screen and (max-width: 850px) {
   .trip {
+    margin-top: 10rem;
     padding: 1rem 2rem;
   }
 

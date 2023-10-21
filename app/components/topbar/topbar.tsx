@@ -60,7 +60,7 @@ function Navbar() {
     <nav className="navbar-Items">
       <h1 className="navbar-Logo">
         {/* <img height={50} src={webLogo} alt="logo" /> */}
-        Jas Ahuja's
+        Jas Ahuja,s
         <p> Life Transformation Trainings & Retreats worldwide</p>
       </h1>
       <div className="menu-Icons" onClick={handleClick}>
