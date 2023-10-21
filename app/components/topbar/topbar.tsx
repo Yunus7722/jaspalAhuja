@@ -25,19 +25,25 @@ function Navbar() {
       toName: "Home",
     },
     {
+      title: "Quotes",
+      url: "/",
+      cName: "nav-Links",
+      toName: "quotes",
+    },
+    {
       title: "Our Feats",
       url: "/",
       cName: "nav-Links",
       toName: "Feats",
     },
     {
-      title: "Gallery",
+      title: "Testimonials",
       url: "/",
       cName: "nav-Links",
       toName: "Gallery",
     },
     {
-      title: "Retreat",
+      title: "Offerings",
       url: "/",
       cName: "nav-Links",
       toName: "Retreat",
@@ -54,7 +60,8 @@ function Navbar() {
     <nav className="navbar-Items">
       <h1 className="navbar-Logo">
         {/* <img height={50} src={webLogo} alt="logo" /> */}
-        Jas Ahuja
+        Jas Ahuja's
+        <p> Life Transformation Trainings & Retreats worldwide</p>
       </h1>
       <div className="menu-Icons" onClick={handleClick}>
         <i

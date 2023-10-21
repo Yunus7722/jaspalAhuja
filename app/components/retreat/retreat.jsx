@@ -47,7 +47,7 @@ const Retreat = () => {
   
       <div className="retreat-container" id="Retreat">
           <div className="overlay-retreat"></div>
-        <h1 className="retreatHeading underline">Our Retreats</h1>
+        <h1 className="retreatHeading underline">Our Offerings</h1>
         <div className="carousal-container">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}

@@ -17,9 +17,9 @@ export default function Footer() {
             <i className="fi fi-brands-linkedin"></i>
           </a>
 
-          <a target="_blank" href=""><i className="fi fi-brands-facebook"></i></a>
-          <a target="_blank" href=""><i className="fi fi-brands-twitter"></i></a>
-          <a target="_blank" href=""><i className="fi fi-brands-discord"></i></a>
+          <a target="_blank" href="https://www.facebook.com/jas.love.357?mibextid=ZbWKwL"><i className="fi fi-brands-facebook"></i></a>
+          <a target="_blank" href="https://instagram.com/jaspal_sir?igshid=MzRlODBiNWFlZA=="><i className="fi fi-brands-instagram"></i></a>
+          {/* <a target="_blank" href=""><i className="fi fi-brands-discord"></i></a> */}
         </div>
       </div>
       <div className="bottomRow">

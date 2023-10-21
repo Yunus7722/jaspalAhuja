@@ -1,10 +1,15 @@
 .intro {
   display: flex;
-  height: 38rem;
+  height: 42rem;
   /* margin-top: 6rem; */
   background-image: url("../../img/bg5.jpg");
   background-size: cover; /* This ensures the image covers the entire container */
   background-position: center; /* Center the image within the container */
+}
+
+.circ-text-cont{
+  display: flex;
+  flex-direction: column;
 }
 
 .overlay {
@@ -13,7 +18,7 @@
   left: 0;
   width: 100%;
   /* 105+70  here adding overlay for throughout*/
-  height: 38rem;
+  height: 42rem;
   background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
   z-index: 0; /* Adjust the z-index to ensure it's above other content */
   pointer-events: none; /* Allows interaction with elements beneath the overlay */
@@ -67,6 +72,8 @@
   width: calc(50% - 10px); /* Adjust the width as needed with some spacing between images */
   margin-bottom: 10px; /* Add margin between rows */
 }
+
+
 
 .i-name > :nth-child(3) {
   font-size: 16px;

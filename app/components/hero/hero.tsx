@@ -8,10 +8,11 @@ import thumbUp from "../../img/thumbup.png";
 import glasses from "../../img/Pikachu.png";
 
 import img1 from "../../img/jp2.jpg";
-import img2 from "../../img/jp1.jpg";
-import img3 from "../../img/jp3.jpg";
-import img4 from "../../img/jp4.jpg";
-import img5 from "../../img/jp5.jpg";
+import img2 from "../../img/ret1.jpg";
+import img3 from "../../img/ret5.jpg";
+import img4 from "../../img/italy.jpg";
+import img5 from "../../img/ret4.jpg";
+import mal from "../../img/jpo2.jpg";
 // import FloatingDiv from "../FloatingDiv/FloatingDiv";
 import { useContext } from "react";
 // import {motion} from 'framer-motion'
@@ -58,22 +59,36 @@ export default function Intro() {
 
       <div className="i-left">
         <div className="i-name">
-          <span>Hi i am </span>
+          <span></span>
           <span>
-            {" "}
-            <Typewriter
+            Jas Ahuja
+            {/* {" "} */}
+            {/* <Typewriter
               words={[str1, str2]}
               loop={10}
               typeSpeed={50}
               deleteSpeed={30}
-            />
+            /> */}
           </span>
 
           <p>
-            A graduate in Mech. Engg with honors from IIT Roorkee, India, is
-            presently heading Sales & Training at My Cloud Forest, As an
-            Investor, has been personally enjoying Financial freedom from last
-            two decades, helps people to create Financial Freedom.
+            {/* <b style={{ fontWeight: "600", color: "black" }}>
+             
+            </b> */}
+            <p>
+              {" "}
+              Wisdom Wealth & Wellness Wizard! Relationship Counselor & Life
+              Coach!{" "}
+              <p>
+                Grew up seeing Tajmahal from Terrace, started composing songs &
+                Music by age 16, graduated from IIT Roorkee in Mech. Engg,
+                worked as Petro chemical Engineer & then as Corporate Trainer,
+                for 9 years then followed inner calling & plunged into
+                alternative education, worked with schools in India East Asia &
+                Europe, has been founder Director of Alternative school & many
+                Successful Edtech Start ups.
+              </p>
+            </p>
           </p>
         </div>
         <Link
@@ -93,36 +108,61 @@ export default function Intro() {
         </Link>
 
         <div className="circular-image-rect">
+          {/* <div className="circ-text-cont"> */}
           <Image
             src={img5}
             style={{ objectFit: "cover", objectPosition: "50% 25%" }}
             className="w-sec-circle"
             alt={""}
           />
-
+          {/* <p>Sri Lanka</p> */}
+          {/* </div> */}
+          {/* <div className="circ-text-cont"> */}
           <Image
             src={img3}
-            style={{ objectFit: "cover", objectPosition: "150% 50%" }}
+            style={{ objectFit: "cover", objectPosition: "80% 50%" }}
             className="w-sec-circle"
             alt={""}
           />
+          {/* </div> */}
+          {/* <div className="circ-text-cont"> */}
           <Image
-            src={img1}
+            src={mal}
             style={{ objectFit: "cover", objectPosition: "50% 25%" }}
             className="w-sec-circle"
             alt={""}
           />
-
+          {/* </div> */}
+          {/* <div className="circ-text-cont"> */}
           <Image
             src={img4}
             style={{ objectFit: "cover", objectPosition: "50% 25%" }}
             className="w-sec-circle"
             alt={""}
           />
+          {/* </div> */}
           {/* <div className="w-sec-circle">
             <Image src={img5} alt="" />
           </div> */}
         </div>
+
+        {/* <div
+          className=""
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            gap: "5rem",
+            marginLeft: "1.4rem",
+            marginTop: "-1rem",
+            color: "wheat",
+            fontWeight: "600s",
+          }}
+        >
+          <p>Sri Lanka</p>
+          <p>Bali Indonesia</p>
+          <p>maldives</p>
+          <p>Milan Italy</p>
+        </div> */}
 
         <div className="i-icons">
           <a
@@ -160,7 +200,7 @@ export default function Intro() {
         /> */}
 
         <Image
-          src={img2}
+          src={img1}
           style={{ objectFit: "cover", objectPosition: "50% 25%" }}
           className="w-main-circle"
           alt={""}

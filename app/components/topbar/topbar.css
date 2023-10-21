@@ -14,7 +14,7 @@
   padding: 0 30px;
   box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 0.25);
   width: 95%;
-  height: 60px;
+  height: 70px;
   border-radius: 100px 100px 100px 100px;
   position: fixed;
   top: 10px;
@@ -52,11 +52,23 @@
 
 .navbar-Logo {
   color: whitesmoke;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   font-weight: 700;
   font-family: serif;
+  display: flex;
+  flex-direction: column;
+ 
 }
+
+.navbar-Logo p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: whitesmoke;
+  cursor: pointer;
+  /* padding-top: -10px; */
+}
+
 .navbar-Menu {
   margin-top: 0px;
   display: grid;
@@ -115,9 +127,31 @@ button:hover {
 }
 
 @media screen and (max-width: 1180px) {
+
+  
+.navbar-Logo {
+  color: whitesmoke;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: serif;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+
+.navbar-Logo p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: whitesmoke;
+  cursor: pointer;
+  /* padding-top: -10px; */
+}
   .navbar-Items {
     z-index: 999;
     width: 80%;
+    height: 70px;
   }
 
   .navbar-Menu {
@@ -127,11 +161,11 @@ button:hover {
     justify-content: flex-start;
     /* align-items: stretch; */
     background: linear-gradient(
-      to bottom right,
-      rgba(167, 16, 205, 0.9),
-      rgba(50, 5, 100, 0.7)
-    ),
-    linear-gradient(45deg, #ff5733, #6dab50);
+        to bottom right,
+        rgba(167, 16, 205, 0.9),
+        rgba(50, 5, 100, 0.7)
+      ),
+      linear-gradient(45deg, #ff5733, #6dab50);
     width: 100%;
     height: auto;
     position: absolute;
@@ -156,7 +190,7 @@ button:hover {
     display: block;
     width: 100%;
     font-size: 1.2rem;
-    padding: 4vh 0rem;
+    padding: 3vh 0rem;
     text-align-last: center;
     color: white;
   }
@@ -183,7 +217,7 @@ button:hover {
 
   .nav-Links-mobile:hover {
     color: white;
-    background-color: #A419AF;
+    background-color: #a419af;
     text-decoration: none;
   }
 
@@ -212,11 +246,11 @@ button:hover {
     justify-content: flex-start;
     /* align-items: stretch; */
     background: linear-gradient(
-      to bottom right,
-      rgba(167, 16, 205, 0.9),
-      rgba(50, 5, 100, 0.7)
-    ),
-    linear-gradient(45deg, #ff5733, #6dab50);
+        to bottom right,
+        rgba(167, 16, 205, 0.9),
+        rgba(50, 5, 100, 0.7)
+      ),
+      linear-gradient(45deg, #ff5733, #6dab50);
     width: 100%;
     height: auto;
     position: absolute;
@@ -241,7 +275,7 @@ button:hover {
     display: block;
     width: 100%;
     font-size: 1.2rem;
-    padding: 4vh 0rem;
+    padding: 3vh 0rem;
     text-align-last: center;
     color: white;
   }
@@ -268,7 +302,7 @@ button:hover {
 
   .nav-Links-mobile:hover {
     color: white;
-    background-color: #A419AF;
+    background-color: #a419af;
     text-decoration: none;
   }
 
