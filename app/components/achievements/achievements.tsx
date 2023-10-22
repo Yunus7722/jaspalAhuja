@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./achievements.css";
 import ill1 from "../../img/ill1.png";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 
 function Achievements() {
@@ -12,19 +13,36 @@ function Achievements() {
     useState(0);
   const [clients, setClients] = useState(0);
 
+  const [satisfiedUsersRef, satisfiedUsersInView] = useInView({
+    // triggerOnce: true,
+  });
+
+  const [experiencedProfessionalsRef, experiencedProfessionalsInView] =
+    useInView({
+      // triggerOnce: true,
+    });
+
+  const [clientsRef, clientsInView] = useInView({
+    // triggerOnce: true,
+  });
+
+  // Use useEffect to start the counting animations when the elements are in view
   useEffect(() => {
-    // Set the target values (200 and 80) and start the counting animations after a delay
-    setTimeout(() => {
-      setSatisfiedUsersCount(10);
-      setExperiencedProfessionalsCount(50);
-      setClients(400);
-    }, 1000); // Adjust the delay as needed
-  }, []);
+    if (satisfiedUsersInView) {
+      setSatisfiedUsersCount(10000); // Set your target value here
+    }
+    if (experiencedProfessionalsInView) {
+      setExperiencedProfessionalsCount(50); // Set your target value here
+    }
+    if (clientsInView) {
+      setClients(400); // Set your target value here
+    }
+  }, [satisfiedUsersInView, experiencedProfessionalsInView, clientsInView]);
 
   return (
     <div className="achievementsMain" id="Feats">
       <div className="achievementLeft">
-        <div className="statusContainer1">
+        <div className="statusContainer1" ref={satisfiedUsersRef}>
           <div className="statusIcon">
             <i
               className="fa-regular fa-face-smile"
@@ -41,28 +59,40 @@ function Achievements() {
         <div className="statusContainer2">
           <div className="statusTexts">
             <div className="statusHeader">
-              <CountUp end={satisfiedUsersCount} duration={2} separator="," />
-              K+
+              {satisfiedUsersInView ? (
+                <CountUp end={satisfiedUsersCount} duration={2} separator="," />
+              ) : (
+                "0"
+              )}
+              +
             </div>
             <p className="statusPara">People Trained Worldwide</p>
           </div>
-          <div className="statusTexts">
+          <div className="statusTexts" ref={experiencedProfessionalsRef}>
             <div className="statusHeader">
-              <CountUp
-                end={experiencedProfessionalsCount}
-                duration={2}
-                separator=","
-              />+
+              {experiencedProfessionalsInView ? (
+                <CountUp
+                  end={experiencedProfessionalsCount}
+                  duration={2}
+                  separator=","
+                />
+              ) : (
+                "0"
+              )}
+              +
             </div>
             <p className="statusPara">Corporates engaged worldwide</p>
-            {/* <p className="statusPara">with commitment beyond contract</p> */}
           </div>
-          <div className="statusTexts">
+          <div className="statusTexts" ref={clientsRef}>
             <div className="statusHeader">
-              <CountUp end={clients} duration={2} separator="," />+
+              {clientsInView ? (
+                <CountUp end={clients} duration={2} separator="," />
+              ) : (
+                "0"
+              )}
+              +
             </div>
             <p className="statusPara">Clients on One to One Life Coaching</p>
-            {/* <p className="statusPara">with commitment beyond contract</p> */}
           </div>
         </div>
       </div>
