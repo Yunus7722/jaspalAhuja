@@ -9,7 +9,7 @@ import img2 from "../../img/jpo2.jpg";
 import img3 from "../../img/ret6.jpg";
 import img4 from "../../img/jpo4.jpg";
 import img5 from "../../img/jpo5.jpg";
-import img6 from "../../img/jpo6.jpg";
+import img6 from "../../img/ret3.jpg";
 
 const Trip = () => {
   return (
@@ -75,6 +75,19 @@ const Trip = () => {
           {/* <p>{props.text}</p> */}
         </div>
         <div className="t-card">
+          <div className="t-image">
+            <Image className="imageCont" src={img6} alt="firstImage" />
+          </div>
+          <h4>
+            I had the opportunity to attend a life-changing learning session
+            that left me feeling rejuvenated and inspired.
+            <h4 style={{ color: "#c9184a" }}> Priya : Trivandrum</h4>
+          </h4>
+          {/* <p>{props.text}</p> */}
+        </div>
+      </div>
+      <div className="trip-card-container">
+        <div className="t-card">
           <div className="t-video">
             <iframe
               // width="350"
@@ -87,10 +100,48 @@ const Trip = () => {
             ></iframe>
           </div>
           <h4>
-            Problems and challenges in life I have been struggling and battling
-            with suddenly seem to be disappearing as now I have moved from
-            Peerception to Perspective
-            <span style={{ color: "#c9184a" }}> Micky: Tamilnadu</span>
+            Problems and challenges in life I have been struggling 
+            with suddenly seem to be disappearing as I have moved from
+            Perception to Perspective
+            <h4 style={{ color: "#c9184a" }}> Micky: Tamilnadu</h4>
+          </h4>
+        </div>
+        <div className="t-card">
+          <div className="t-video">
+            <iframe
+              width="640"
+              height="360"
+              src="https://www.youtube.com/embed/cs_27BTlvfw"
+              title="2 minutes spiritual journey"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h4>
+            Embarking on a spiritual journey has been a profound experience.I
+            have learned to embrace lifes mysteries and find harmony in the
+            universe.
+            <h4 style={{ color: "#c9184a" }}> Prajwal : Assam </h4>
+          </h4>
+        </div>
+        <div className="t-card">
+          <div className="t-video">
+            <iframe
+              width="320"
+              height="560"
+              src="https://www.youtube.com/embed/okdGqBSHEB4"
+              title="Yet another Jas Ahuja&#39;s Total Transformation Retreat, bonfire session..."
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h4>
+            Bonfires often create a wonderful atmosphere for bonding and
+            creating lasting memories which we wont regret till our last
+            breath..
+            <h4 style={{ color: "#c9184a" }}> James : Goa </h4>
           </h4>
         </div>
       </div>
