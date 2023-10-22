@@ -1,12 +1,11 @@
 "use client";
-
-import React from "react";
-// import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import "./topbar.css";
 import { Link } from "react-scroll";
 
 function Navbar() {
-  const [clicked, setClicked] = React.useState(true);
+  const [clicked, setClicked] = useState(true);
+  const [windowHeight, setWindowHeight] = useState(0);
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -16,7 +15,22 @@ function Navbar() {
     setClicked(true);
   };
 
-  // Define the menu items as an array within the component
+  const updateWindowHeight = () => {
+    if (typeof window !== "undefined") {
+      setWindowHeight(window.innerHeight);
+    }
+  };
+
+  useEffect(() => {
+    updateWindowHeight();
+    window.addEventListener("resize", updateWindowHeight); // Update window height on resize
+
+    return () => {
+      window.removeEventListener("resize", updateWindowHeight); // Clean up the event listener
+    };
+  }, []);
+
+  // Define your menuItems as before
   const menuItems = [
     {
       title: "Home",
@@ -59,7 +73,6 @@ function Navbar() {
   return (
     <nav className="navbar-Items">
       <h1 className="navbar-Logo">
-        {/* <img height={50} src={webLogo} alt="logo" /> */}
         Jas Ahuja,s
         <p> Life Transformation Trainings & Retreats worldwide</p>
       </h1>
@@ -74,8 +87,6 @@ function Navbar() {
           <li key={index}>
             <Link
               activeStyle={{
-                // textDecoration: "none",
-                // borderBottom: "4px solid #2a9d8f",
                 fontWeight: 700,
                 fontFamily: "Poppins, sans-serif",
               }}
@@ -83,7 +94,7 @@ function Navbar() {
               smooth={true}
               spy={true}
               activeClass="activeClass"
-              // offset={-window.innerHeight / 8}
+              offset={-windowHeight / 8}
             >
               <a className={item.cName} onClick={handleMenuClick}>
                 {item.title}
