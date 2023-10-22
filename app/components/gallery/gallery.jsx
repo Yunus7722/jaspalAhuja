@@ -15,7 +15,7 @@ const Trip = () => {
   return (
     <div className="trip" id="Gallery">
       <h1 className="underline">Testimonials</h1>
-      <p>you can discover new destinations from us</p>
+      {/* <p>you can discover new destinations from us</p> */}
       <div className="trip-card-container">
         <div className="t-card">
           <div className="t-image">

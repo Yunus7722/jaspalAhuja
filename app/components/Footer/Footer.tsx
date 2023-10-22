@@ -8,8 +8,8 @@ export default function Footer() {
     <div className="footer">
       <div className="topRow">
         <div>
-          <h1>Jaspal Singh Ahuja</h1>
-          <p>it is a great adventure in joining us</p>
+          <h1>Jas Ahuja</h1>
+          {/* <p>it is a great adventure in joining us</p> */}
         </div>
         <div className="iconCont">
           <a target="_blank" href="https://www.linkedin.com/in/jaspal-singh-ahuja-a60b6612/">

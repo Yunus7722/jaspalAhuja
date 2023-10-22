@@ -38,17 +38,18 @@ function Navbar() {
       cName: "nav-Links",
       toName: "Home",
     },
-    {
-      title: "Quotes",
-      url: "/",
-      cName: "nav-Links",
-      toName: "quotes",
-    },
+
     {
       title: "Our Feats",
       url: "/",
       cName: "nav-Links",
       toName: "Feats",
+    },
+    {
+      title: "Quotes",
+      url: "/",
+      cName: "nav-Links",
+      toName: "quotes",
     },
     {
       title: "Testimonials",
@@ -87,8 +88,11 @@ function Navbar() {
           <li key={index}>
             <Link
               activeStyle={{
-                fontWeight: 700,
-                fontFamily: "Poppins, sans-serif",
+                textDecoration: "none",
+                backgroundColor: "#EA698B",
+                // borderBottom: "4px solid #2a9d8f",
+                borderRadius: "50px",
+                padding: "0.7rem 0rem",
               }}
               to={item.toName}
               smooth={true}
