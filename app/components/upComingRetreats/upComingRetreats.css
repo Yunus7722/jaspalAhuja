@@ -21,12 +21,12 @@
 }
 
 .firstRow {
-  padding: 1rem 0rem 0rem 0rem;
-  flex: 6;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  /* background-color: #72d59f; */
+    padding: 2rem 0rem 0.5rem 0rem;
+    /* flex: 6; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .secondRow {
