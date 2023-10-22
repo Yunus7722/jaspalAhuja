@@ -56,7 +56,7 @@ export default function Intro() {
   return (
     <div className="intro" id="Home">
       <a
-        href="https://wa.me/+918431227365?text=Hi%20Qiscus"
+        href="https://wa.me/+919844290460?text=Hi%20Lets%20Discuss"
         className="floating"
         target="_blank"
       >
