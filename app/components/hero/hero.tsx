@@ -55,6 +55,13 @@ export default function Intro() {
   var str2 = "Jaspal Singh Ahuja";
   return (
     <div className="intro" id="Home">
+      <a
+        href="https://wa.me/+918431227365?text=Hi%20Qiscus"
+        className="floating"
+        target="_blank"
+      >
+        <i className="fi fi-brands-whatsapp"></i>
+      </a>
       <div className="overlay"></div>
 
       <div className="i-left">
