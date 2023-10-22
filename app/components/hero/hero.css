@@ -35,12 +35,13 @@
 }
 
 .burst-12 {
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom right,
       rgba(167, 16, 205, 0.9),
       rgba(167, 16, 205, 0.9)
-    );
+    ); */
     /* ,linear-gradient(45deg, #ff5733, #6dab50); */
+    background-color: #A7FF79;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -65,11 +66,12 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom right,
     rgba(167, 16, 205, 0.9),
     rgba(167, 16, 205, 0.9)
-  );
+  ); */
+  background-color: #A7FF79;
   animation: none;
 }
 
@@ -91,7 +93,7 @@
   font-size: 10px;
   line-height: 16px;
   width: 4rem;
-  color: antiquewhite;
+  color: #781e9e;
   font-weight: 600;
   text-align: center;
   font-size: 14px;
