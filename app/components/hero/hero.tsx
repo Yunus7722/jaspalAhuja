@@ -122,7 +122,7 @@ export default function Intro() {
               fontWeight: 700,
               fontFamily: "Poppins, sans-serif",
             }}
-            to="Contact"
+            to="upComingRetreats"
             smooth={true}
             spy={true}
             activeClass="activeClass"
