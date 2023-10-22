@@ -7,6 +7,97 @@
   background-position: center; /* Center the image within the container */
 }
 
+.add-container{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  gap: 20vw;
+}
+.burst-container {
+  transform: scale(1.3);
+  position: relative;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.burst-12 {
+  background: linear-gradient(
+      to bottom right,
+      rgba(167, 16, 205, 0.9),
+      rgba(167, 16, 205, 0.9)
+    );
+    /* ,linear-gradient(45deg, #ff5733, #6dab50); */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.burst-12:before,
+.burst-12:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(167, 16, 205, 0.9),
+    rgba(167, 16, 205, 0.9)
+  );
+  animation: none;
+}
+
+.burst-12:before {
+  transform: rotate(30deg);
+}
+
+.burst-12:after {
+  transform: rotate(60deg);
+}
+
+.static-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 10px;
+  line-height: 16px;
+  width: 4rem;
+  color: antiquewhite;
+  font-weight: 600;
+  text-align: center;
+  font-size: 14px;
+}
+
+
 
 /* Add WA floating button CSS */
 .floating {
@@ -260,6 +351,15 @@
   }
 
   
+.add-container{
+  display: flex;
+  flex-direction: column-reverse;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 20vw;
+}
+
+  
   .w-sec-circle:hover {
     /* transition: ease-in-out 0.3s; */
     transform: scale(1);
@@ -271,7 +371,7 @@
     left: 0;
     width: 100%;
     /* 105+70  here adding overlay for throughout*/
-    height: 80rem;
+    height: 90rem;
     background-color: rgba(
       0,
       0,
@@ -295,7 +395,7 @@
   
   .intro {
     flex-direction: column;
-    height: 80rem;
+    height: 90rem;
     /* gap: 7rem; */
     width: 100%;
   }

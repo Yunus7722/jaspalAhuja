@@ -98,21 +98,42 @@ export default function Intro() {
             </p>
           </p>
         </div>
-        <Link
-          activeStyle={{
-            // textDecoration: "none",
-            // borderBottom: "4px solid #2a9d8f",
-            fontWeight: 700,
-            fontFamily: "Poppins, sans-serif",
-          }}
-          to="Contact"
-          smooth={true}
-          spy={true}
-          activeClass="activeClass"
-          // offset={-window.innerHeight / 8}
-        >
-          <div className="button i-button">Get in touch</div>
-        </Link>
+
+        <div className="add-container">
+          <Link
+            activeStyle={{
+              // textDecoration: "none",
+              // borderBottom: "4px solid #2a9d8f",
+              fontWeight: 700,
+              fontFamily: "Poppins, sans-serif",
+            }}
+            to="Contact"
+            smooth={true}
+            spy={true}
+            activeClass="activeClass"
+            // offset={-window.innerHeight / 8}
+          >
+            <div className="button i-button">Get in touch</div>
+          </Link>
+          <Link
+            activeStyle={{
+              // textDecoration: "none",
+              // borderBottom: "4px solid #2a9d8f",
+              fontWeight: 700,
+              fontFamily: "Poppins, sans-serif",
+            }}
+            to="Contact"
+            smooth={true}
+            spy={true}
+            activeClass="activeClass"
+            // offset={-window.innerHeight / 8}
+          >
+            <div className="burst-container">
+              <div className="burst-12"></div>
+              <div className="static-content">View upcoming retreats</div>
+            </div>
+          </Link>
+        </div>
 
         <div className="circular-image-rect">
           {/* <div className="circ-text-cont"> */}
