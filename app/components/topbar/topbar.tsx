@@ -40,10 +40,16 @@ function Navbar() {
     },
 
     {
-      title: "Our Feats",
+      title: "Achievements",
       url: "/",
       cName: "nav-Links",
       toName: "Feats",
+    },
+    {
+      title: "Offerings",
+      url: "/",
+      cName: "nav-Links",
+      toName: "offerings",
     },
     {
       title: "Quotes",
@@ -57,12 +63,7 @@ function Navbar() {
       cName: "nav-Links",
       toName: "Gallery",
     },
-    {
-      title: "Offerings",
-      url: "/",
-      cName: "nav-Links",
-      toName: "Retreat",
-    },
+    
     {
       title: "Contact Us",
       url: "/",

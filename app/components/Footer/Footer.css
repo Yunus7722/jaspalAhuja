@@ -8,11 +8,13 @@
       linear-gradient(360deg, #ff5733, #6dab50);
     color: white;
     padding: 4rem 6rem;
+    display: flex;
+    flex-direction: column;
 
 
 }
 
-.topRow{
+.topRow-footer{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,20 +25,20 @@
 }
 
 
-.topRow h1{
+.topRow-footer h1{
     text-align: left;
     font-size: 3rem;
     font-weight: 700;
 }
-.topRow p{
+.topRow-footer p{
     text-align: left;
     font-size: 1.2rem;
     padding: 0.5rem 0;
 }
-.topRow a{
+.topRow-footer a{
     text-align: left;
 }
-.topRow i {
+.topRow-footer i {
     color: white;
     padding: 1.2rem;
     font-size: 3rem;
@@ -44,13 +46,13 @@
     /* Apply the transition here */
 }
 
-.topRow i:hover {
+.topRow-footer i:hover {
     color: bisque;
     font-size: 4rem;
 }
 
 
-.bottomRow{
+.bottomRow-footer{
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
@@ -61,7 +63,7 @@
 }
 
 
-.bottomRow h4{
+.bottomRow-footer h4{
     text-align: left;
     font-size: 1.8rem;
     padding-bottom: 1rem;
@@ -70,7 +72,7 @@
 }
 
 
-.bottomRow a{
+.bottomRow-footer a{
     text-align: left; 
     text-decoration: none;  
     color: wheat;
@@ -80,12 +82,12 @@
 }
 
 
-.bottomRow a:hover{
+.bottomRow-footer a:hover{
    color: white;
 
 }
 
-.bottomRow div{
+.bottomRow-footer div{
     /* text-align: left;    */
     display: flex;
     flex-direction: column; 
@@ -105,7 +107,7 @@
     }
 
     
-.topRow i {
+.topRow-footer i {
     color: white;
     padding: 0.8rem;
     font-size: 2rem;
@@ -113,9 +115,19 @@
     /* Apply the transition here */
 }
 
-.topRow i:hover {
+.topRow-footer i:hover {
     color: bisque;
     font-size: 2.2rem;
 }
+
+
+.topRow-footer h1{
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+
     
 }

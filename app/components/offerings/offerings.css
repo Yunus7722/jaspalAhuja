@@ -1,7 +1,7 @@
 .mainContainer {
   display: flex;
   flex-direction: column;
-  height: 40rem;
+  /* height: 60rem; */
   /* margin-bottom: 110vh; */
   /* position: inherit; */
   background-image: url("../../img/bg5.jpg");
@@ -9,28 +9,39 @@
   background-position: center; /* Center the image within the container */
 }
 
+.modal-custom-box{
+  background: linear-gradient(
+    to bottom right,
+    #800080,
+    #ffc0cb
+  ),
+  linear-gradient(360deg, #ff5733, #6dab50);
+  color: white;
+}
+
 .mainHeader {
   margin-top: 4%;
+  margin-left: 10vw;
   align-self: center;
   font-size: 40px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: var(--darkBlue);
-  border-bottom: 2px solid var(--darkBlue);
+  /* border-bottom: 2px solid var(--darkBlue); */
   width: 30%;
 }
 
 .firstRow {
-    padding: 2rem 0rem 0.5rem 0rem;
-    /* flex: 6; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  padding: 1rem 0rem 0rem 0rem;
+  flex: 6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* background-color: #72d59f; */
 }
 
 .secondRow {
-  padding: 2rem 0rem rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
   flex: 6;
   display: flex;
   flex-direction: row;
@@ -48,13 +59,13 @@
   flex-direction: column;
   /* justify-content: space-around; */
   width: 30vw;
-  height: 15rem;
+  height: 30rem;
   border-radius: 50px;
   /* background-color: lightskyblue; */
   background: linear-gradient(
       to bottom left,
-      rgba(167, 16, 205, 0.9),
-      rgba(50, 5, 100, 0.7)
+      rgba(114, 4, 142, 0.9),
+      #9D4EDD
     ),
     linear-gradient(360deg, #ff5733, #6dab50);
   padding: 0.2rem 1rem 0.2rem 1rem;
@@ -90,30 +101,32 @@
   font-weight: 700;
   color: white;
   margin-top: -1.3rem;
+  margin-bottom: 1rem;
 }
 
 .paraText {
   /* margin-top: -0.5rem; */
   margin: 0;
-  margin-left: 4rem;
+  margin-left: 1rem;
   text-align: start;
   /* align-self: center; */
   /* justify-self: center; */
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   color: white;
-  width: 70%;
+  width: 90%;
 }
 
 .hyperLink {
   text-align: center;
   align-self: center;
-  font-size: 14px;
+  font-size: 17px;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   color: wheat;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   text-decoration: underline;
 }
 
@@ -138,17 +151,17 @@
   .mainContainer {
     display: flex;
     flex-direction: column;
-    height: 300vh;
+    /* height: 300vh; */
     /* margin-bottom: 110vh; */
     /* position: inherit; */
   }
 
   .firstRow {
-    padding: 0.5rem 0rem 0.5rem 0rem;
+    padding: 2rem 0rem 0rem 0rem;
     /* flex: 6; */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
   }
 
@@ -163,11 +176,28 @@
 
   .cardMain {
     /* background-color: ; */
-    width: 85vw;
+    width: 100vw;
+    height: 30rem;
   }
 
   .mainHeader {
     margin-left: 2rem;
     width: 70%;
+  }
+
+  .paraText{
+    width: 98%;
+  }
+
+  .mainHeader {
+    margin-top: 5%;
+    margin-left: 3vw;
+    align-self: center;
+    font-size: 35px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: var(--darkBlue);
+    /* border-bottom: 2px solid var(--darkBlue); */
+    width: 90%;
   }
 }

@@ -1,12 +1,18 @@
 .achievementsMain{
     display: flex;
     flex-direction: row;
-    height: 25rem;
+    height: 28rem;
     background-image: url("../../img/bg5.jpg");
     background-size: cover; /* This ensures the image covers the entire container */
     background-position: center; /* Center the image within the container */
 }
 
+.achievementHeading{
+    /* margin-top: 2rem; */
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: rgb(66, 11, 118);
+}
 
 .achieveOverlay {
     display: flex;
@@ -28,6 +34,7 @@
     align-items: center;
     /* background-color: aqua; */
     justify-content: center;
+    margin-bottom: 2rem;
 }
 .achievementRight{
     align-items: center;
@@ -43,7 +50,7 @@
     transition: 0.3s ease-in-out;
 }
 .achievementRight img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.3s ease-in-out;
 }
 
@@ -107,7 +114,7 @@
     .achievementsMain {
         display: flex;
         flex-direction: column-reverse;
-        height: 120vh;
+        height: 130vh;
     }
     /* .statusContainer1{
         display: flex;
@@ -116,6 +123,15 @@
         align-self: flex-start;
         margin-left: 2rem;
     } */
+
+    
+.achievementHeading{
+   /* padding-left: 2rem; */
+   margin-top: 2rem;
+   font-size: 2rem;
+   font-weight: 600;
+   color: rgb(66, 11, 118);
+}
 }
 
 @media screen and (max-width:750px) {
@@ -131,8 +147,8 @@
     } */
     .achievementsMain {
         display: flex;
-        flex-direction: column;
-        height: 120vh;
+        flex-direction: column-reverse;
+        height: 130vh;
     }
     /* .statusContainer1{
         display: flex;

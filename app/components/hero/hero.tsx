@@ -1,6 +1,6 @@
 "use client";
 import "./hero.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import imgDesign from "../../img/abstract2.png";
 import imgPic from "../../img/ProfilePIcY.png";
 import crown from "../../img/crown.png";
@@ -51,6 +51,23 @@ export default function Intro() {
     config: { duration: 1000 },
   });
 
+  const [windowHeight, setWindowHeight] = useState(0);
+
+  const updateWindowHeight = () => {
+    if (typeof window !== "undefined") {
+      setWindowHeight(window.innerHeight);
+    }
+  };
+
+  useEffect(() => {
+    updateWindowHeight();
+    window.addEventListener("resize", updateWindowHeight); // Update window height on resize
+
+    return () => {
+      window.removeEventListener("resize", updateWindowHeight); // Clean up the event listener
+    };
+  }, []);
+
   var str1 = "Jaspal Singh Ahuja";
   var str2 = "Jaspal Singh Ahuja";
   return (
@@ -87,13 +104,11 @@ export default function Intro() {
               Wisdom Wealth & Wellness Wizard! Relationship Counselor & Life
               Coach!{" "}
               <p>
-                Grew up seeing Tajmahal from Terrace, started composing songs &
-                Music by age 16, graduated from IIT Roorkee in Mech. Engg,
-                worked as Petro chemical Engineer & then as Corporate Trainer,
-                for 9 years then followed inner calling & plunged into
-                alternative education, worked with schools in India East Asia &
-                Europe, has been founder Director of Alternative school & many
-                Successful Edtech Start ups.
+                Graduated from IIT Roorkee in Mech. Engg, worked as Petro
+                chemical Engineer & then as Corporate Trainer. Later plunged
+                into alternative education, worked with schools in India, East
+                Asia & Europe, and founded an Alternative school too. He has
+                been part of many successful Edtech start-ups.
               </p>
             </p>
           </p>
@@ -111,7 +126,7 @@ export default function Intro() {
             smooth={true}
             spy={true}
             activeClass="activeClass"
-            // offset={-window.innerHeight / 8}
+            offset={-windowHeight / 8}
           >
             <div className="button i-button">Get in touch</div>
           </Link>
@@ -122,53 +137,76 @@ export default function Intro() {
               fontWeight: 700,
               fontFamily: "Poppins, sans-serif",
             }}
-            to="upComingRetreats"
+            to="upComingEvents"
             smooth={true}
             spy={true}
             activeClass="activeClass"
-            // offset={-window.innerHeight / 8}
+            offset={-windowHeight / 8}
           >
             <div className="burst-container">
               <div className="burst-12"></div>
-              <div className="static-content">View upcoming retreats</div>
+              <div className="static-content">View Upcoming Events</div>
+            </div>
+          </Link>
+          <Link
+            activeStyle={{
+              // textDecoration: "none",
+              // borderBottom: "4px solid #2a9d8f",
+              fontWeight: 700,
+              fontFamily: "Poppins, sans-serif",
+            }}
+            to="upComingEvents"
+            smooth={true}
+            spy={true}
+            activeClass="activeClass"
+            offset={-windowHeight / 8}
+          >
+            <div className="burst-container">
+              <div className="burst-12"></div>
+              <div className="static-content -ml-2">
+                &nbsp;&nbsp;&nbsp;1 - 1&nbsp; &nbsp;&nbsp;Life counselling
+              </div>
             </div>
           </Link>
         </div>
 
         <div className="circular-image-rect">
-          {/* <div className="circ-text-cont"> */}
+          <div className="circ-text-cont">
           <Image
             src={img5}
             style={{ objectFit: "cover", objectPosition: "50% 25%" }}
             className="w-sec-circle"
             alt={""}
           />
-          {/* <p>Sri Lanka</p> */}
-          {/* </div> */}
-          {/* <div className="circ-text-cont"> */}
+          <p className="loc-text underline">Sri Lanka</p>
+          </div>
+          <div className="circ-text-cont">
           <Image
             src={img3}
             style={{ objectFit: "cover", objectPosition: "80% 50%" }}
             className="w-sec-circle"
             alt={""}
           />
-          {/* </div> */}
-          {/* <div className="circ-text-cont"> */}
+           <p className="loc-text underline">Bali Indonesia</p>
+          </div>
+          <div className="circ-text-cont">
           <Image
             src={mal}
             style={{ objectFit: "cover", objectPosition: "50% 25%" }}
             className="w-sec-circle"
             alt={""}
           />
-          {/* </div> */}
-          {/* <div className="circ-text-cont"> */}
+           <p className="loc-text underline">Maldives</p>
+          </div>
+          <div className="circ-text-cont">
           <Image
             src={img4}
             style={{ objectFit: "cover", objectPosition: "50% 25%" }}
             className="w-sec-circle"
             alt={""}
           />
-          {/* </div> */}
+           <p className="loc-text underline">Milan Italy</p>
+          </div>
           {/* <div className="w-sec-circle">
             <Image src={img5} alt="" />
           </div> */}

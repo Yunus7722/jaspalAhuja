@@ -97,6 +97,7 @@ function Achievements() {
         </div>
       </div>
       <div className="achievementRight">
+      <h1 className="achievementHeading underline mb-5">Our Achievements</h1>
         <Image
           style={{
             width: "50%",

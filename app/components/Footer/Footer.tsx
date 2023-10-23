@@ -6,7 +6,7 @@ import { FacebookShareButton, FacebookIcon } from "next-share";
 export default function Footer() {
   return (
     <div className="footer">
-      <div className="topRow">
+      <div className="topRow-footer">
         <div>
           <h1>Jas Ahuja</h1>
           {/* <p>it is a great adventure in joining us</p> */}
@@ -22,7 +22,7 @@ export default function Footer() {
           {/* <a target="_blank" href=""><i className="fi fi-brands-discord"></i></a> */}
         </div>
       </div>
-      <div className="bottomRow">
+      <div className="bottomRow-footer">
         <div>
           <h4>Projects</h4>
           <a href="/">Changelog</a>

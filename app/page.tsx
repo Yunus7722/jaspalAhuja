@@ -7,7 +7,7 @@ import Gallery from "./components/gallery/gallery";
 import ContactUs from "./components/contactUs/contactUs";
 import Retreat from "./components/retreat/retreat";
 import Quotes from "./components/quotes/quotes";
-import UpComingRetreats from "./components/upComingRetreats/upComingRetreats";
+import Offerings from "./components/offerings/offerings";
 
 export default function Home() {
   return (
@@ -15,10 +15,10 @@ export default function Home() {
       <TopBar /> {/* Include the TopBar component here */}
       <Hero />
       <Achievements />
-      <UpComingRetreats />
+      <Retreat />
+      <Offerings />
       <Quotes />
       <Gallery />
-      <Retreat />
       <ContactUs />
       <Footer />
     </main>
