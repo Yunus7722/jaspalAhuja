@@ -1,0 +1,683 @@
+.intro-e {
+  display: flex;
+  height: 55rem;
+  /* margin-top: 6rem; */
+  background-image: url("../../img/bg5.jpg");
+  background-size: cover; /* This ensures the image covers the entire container */
+  background-position: center; /* Center the image within the container */
+}
+
+
+.e-card {
+  width: 20rem;
+  /* padding: 5rem; */
+  box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.5);
+  /* border-radius: 20% 20% 20% 21% / 20% 20% 20% 20% ; */
+  border-radius: 500px 40px 40px 40px;
+  cursor: pointer;
+  padding: 0.3rem 0.3rem;
+  background-color: rgba(255, 255, 255, 0.504);
+  align-items: flex-end;
+}
+.e-card h4 {
+  
+  text-align: end;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d769ad;
+  padding: 0.9rem 1rem 0;
+}
+
+.e-card p {
+  align-self: flex-end;
+  width: 17rem;
+  margin-top: 3rem;
+  text-align: right;
+  font-size: 14px;
+  padding: 0.3rem 0.1rem;
+  color: #6E55A6;
+  font-weight: 600;
+}
+
+
+.modal-head-e {
+  background: linear-gradient(to bottom left, #6a82fb, #fc5c7d);
+}
+.modal-body-e {
+  background: linear-gradient(to bottom right, #fc5c7d, #6a82fb);
+}
+
+.custom-modal-e {
+  z-index: 99999; /* Adjust this value based on your needs */
+}
+
+.cardMain-e {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  /* width: 100vw; */
+  height: 5rem;
+  border-radius: 10px 50px 10px 50px;
+  /* background-color: lightskyblue; */
+  background: linear-gradient(to bottom left, rgba(114, 4, 142, 0.9), #9d4edd),
+    linear-gradient(360deg, #ff5733, #6dab50);
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Add a transition for background color change */
+  transform: scale(0.9);
+  /* Initial scale down the container */
+  /* transform-origin: center; */
+  align-items: center;
+ 
+}
+
+
+.cardMain-e:hover {
+  background: linear-gradient(
+    to bottom right,
+    #800080,
+    #ffc0cb
+  ),
+  linear-gradient(360deg, #ff5733, #6dab50);
+transform: scale(1);
+}
+.cardMain-e::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Place the pseudo-element behind the main element */
+  border-radius: inherit; /* Inherit the border-radius from the main element */
+  background: inherit; /* Inherit the background from the main element */
+  filter: blur(10px); /* Apply the blur effect */
+}
+
+.headerText-e {
+  padding: 1rem 0.3rem;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: white;
+  /* margin-top: -0.1rem; */
+}
+
+.add-container-e {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  gap: 10vw;
+}
+
+.loc-text-e {
+  font-size: 20px;
+  color: #5a3071;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  align-self: center;
+}
+
+.burst-container-e {
+  transform: scale(1.3);
+  position: relative;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.burst-12-e {
+  /* background: linear-gradient(
+        to bottom right,
+        rgba(167, 16, 205, 0.9),
+        rgba(167, 16, 205, 0.9)
+      ); */
+  /* ,linear-gradient(45deg, #ff5733, #6dab50); */
+  background-color: #c9184a;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.burst-12-e:before,
+.burst-12-e:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background: linear-gradient(
+      to bottom right,
+      rgba(167, 16, 205, 0.9),
+      rgba(167, 16, 205, 0.9)
+    ); */
+  background-color: #c9184a;
+  animation: none;
+}
+
+.burst-12-e:before {
+  transform: rotate(30deg);
+}
+
+.burst-12-e:after {
+  transform: rotate(60deg);
+}
+
+.static-content-e {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  /* color: white; */
+  font-size: 10px;
+  line-height: 16px;
+  width: 4rem;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Add WA floating button CSS */
+.floating-e {
+  position: fixed;
+  width: 50px;
+  height: 40px;
+  bottom: 40px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  /* justify-content: center; */
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.fab-icon-e {
+  margin-top: 16px;
+}
+
+/* Page Product button CSS */
+.product-float-e {
+  position: fixed;
+  width: 70px;
+  height: 50px;
+  /* bottom: 40px; */
+  top: 30vh;
+  right: 0;
+  background: linear-gradient(
+      to bottom right,
+      rgba(167, 16, 205, 0.9),
+      rgba(50, 5, 100, 0.7)
+    ),
+    linear-gradient(45deg, #ff5733, #6dab50);
+  color: #fff;
+  border-radius: 25px 0px 0px 25px;
+  /* justify-content: center; */
+  text-align: center;
+  font-size: 30px;
+  box-shadow: -0px 0px 15px #4c0637;
+  z-index: 100;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.product-float-text-e {
+  line-height: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.product-float-e:hover {
+  width: 90px;
+  background: linear-gradient(to bottom right, #800080, #ffc0cb),
+    linear-gradient(360deg, #ff5733, #6dab50);
+}
+
+.circ-text-cont-e {
+  display: flex;
+  flex-direction: row;
+}
+
+.overlay-e {
+  position: absolute; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* 105+70  here adding overlay for throughout*/
+  height: 55rem;
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+  z-index: 0; /* Adjust the z-index to ensure it's above other content */
+  pointer-events: none; /* Allows interaction with elements beneath the overlay */
+}
+
+.i-left-e {
+  margin-top: 3rem;
+  margin-left: 2rem;
+  display: flex;
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem;
+}
+.i-name-e {
+  display: flex;
+  flex-direction: column;
+}
+
+.i-name-e > :nth-child(1) {
+  font-size: 3rem;
+  color: #86078f;
+  font-weight: bold;
+}
+.i-name-e > :nth-child(2) {
+  font-size: 3rem;
+  color: wheat;
+  font-weight: bold;
+}
+
+.name-e {
+  font-size: 3rem;
+  color: wheat;
+  font-weight: bold;
+}
+
+.circular-image-rect-e {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  gap: 20px;
+}
+/* 
+.circular-image-rect-e {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+} */
+/* 
+.circular-image-rect-e > * {
+  width: calc(
+    50% - 10px
+  ); 
+  margin-bottom: 10px; 
+} */
+
+.i-name-e > :nth-child(3) {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+.i-button-e {
+  width: 12rem;
+  height: 3rem;
+}
+
+.i-icons-e {
+  font-size: 60px;
+  color: var(--orange);
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 6rem;
+  margin-left: 3rem;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.i-icons-e > *:hover {
+  transform: scale(1.5);
+  transition: 0.3s ease-in-out;
+}
+
+.i-right-e {
+  margin-top: 0rem;
+  flex: 1;
+  position: relative;
+}
+
+.i-right-e > * {
+  position: absolute;
+  z-index: 1;
+}
+
+.i-right-e > :nth-child(1) {
+  top: 10%;
+}
+
+.i-right-e > :nth-child(2) {
+  top: -10%;
+  left: 15%;
+  /* border-radius: 20% 40% 20% 40%; */
+  transform: scale(0.8);
+}
+
+.i-right-e > :nth-child(3) {
+  top: -10%;
+  left: -15%;
+  transform: scale(0.6);
+}
+
+.blur-e {
+  position: absolute;
+  width: 33rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #edd0ff;
+  filter: blur(72px);
+  z-index: -9;
+  top: 0%;
+  left: 46%;
+}
+
+.w-main-circle-e {
+  position: relative;
+  width: 25rem;
+  height: 23rem;
+  border-radius: 40px 75px 40px 75px;
+  box-shadow: var(--smboxShadow);
+  background-color: white;
+  top: 0%;
+  left: 20%;
+}
+
+.w-back-circle-e {
+  object-fit: cover;
+  object-position: 50% 25%;
+  position: relative;
+  width: 27rem;
+  height: 23rem;
+  border-radius: 40px 75px 40px 75px;
+  margin-left: 15%;
+}
+
+.w-sec-circle-e {
+  /* position: absolute; */
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  box-shadow: var(--smboxShadow);
+  /* background-color: wheat; */
+  top: 0%;
+  left: 5%;
+  background: white;
+  border: 5px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.w-sec-circle-e:hover {
+  transition: ease-in-out 0.3s;
+  transform: scale(1.3);
+}
+
+.w-sec-circle-e > img {
+  transform: scale(1);
+}
+
+.w-main-circle-e > * {
+  position: absolute;
+}
+
+.w-main-circle-e > :nth-child(1) {
+  top: -4rem;
+  left: 8rem;
+}
+
+.w-main-circle-e > :nth-child(2) {
+  top: 8rem;
+  left: -4rem;
+}
+
+.w-main-circle-e > :nth-child(3) {
+  top: 8rem;
+  left: 19rem;
+}
+
+.w-main-circle-e > :nth-child(4) {
+  top: 8rem;
+  left: 8rem;
+}
+
+.w-main-circle-e > :nth-child(5) {
+  top: 20rem;
+  left: 8rem;
+}
+
+.backCircle-e {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.blueCircle-e {
+  background-color: #781e9e;
+  top: -5%;
+  left: 40%;
+}
+
+.yellowCircle-e {
+  background-color: #ffeb3a;
+  top: 25%;
+  left: 40%;
+}
+
+@media screen and (max-width: 1100px) {
+  .w-main-circle-e {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 100%;
+    box-shadow: var(--smboxShadow);
+    background-color: white;
+    top: 0%;
+    left: 2vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .w-main-circle-e {
+    position: relative;
+    width: 80vw;
+    height: 80vw;
+    border-radius: 100%;
+    box-shadow: var(--smboxShadow);
+    background-color: white;
+    top: 0%;
+    left: 10vw;
+  }
+
+  .circ-text-cont-e {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .i-name-e > :nth-child(3) {
+    font-size: 16px;
+    color: #5a3071;
+    font-weight: 600;
+  }
+
+  .floating-e {
+    position: fixed;
+    width: 50px;
+    height: 40px;
+    bottom: 40px;
+    right: 10px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    /* justify-content: center; */
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+  }
+  .product-float-e {
+    position: fixed;
+    width: 70px;
+    height: 50px;
+    /* bottom: 40px; */
+    top: 30vh;
+    right: 0;
+    background: linear-gradient(
+        to bottom right,
+        rgba(167, 16, 205, 0.9),
+        rgba(50, 5, 100, 0.7)
+      ),
+      linear-gradient(45deg, #ff5733, #6dab50);
+    color: #fff;
+    border-radius: 25px 0px 0px 25px;
+    /* justify-content: center; */
+    text-align: center;
+    font-size: 30px;
+    box-shadow: -0px 0px 15px #4c0637;
+    z-index: 100;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  .product-float-text-e {
+    line-height: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .add-container-e {
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20vw;
+  }
+
+  .w-sec-circle-e:hover {
+    /* transition: ease-in-out 0.3s; */
+    transform: scale(1);
+  }
+
+  .overlay-e {
+    position: absolute; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 105+70  here adding overlay for throughout*/
+    height: 100rem;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.2
+    ); /* Semi-transparent black background */
+    z-index: 0; /* Adjust the z-index to ensure it's above other content */
+    pointer-events: none; /* Allows interaction with elements beneath the overlay */
+  }
+
+  .w-sec-circle-e {
+    transition: ease-in-out 0.3s;
+    transform: scale(1);
+  }
+  /* .circular-image-rect {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    } */
+
+  .intro-e {
+    flex-direction: column;
+    height: 100rem;
+    /* gap: 7rem; */
+    width: 100%;
+  }
+  .i-right-e {
+    transform: scale(0.5);
+    left: -5rem;
+    top: -10rem;
+  }
+  .floating-div-e:nth-of-type(3) {
+    transform: none !important;
+    transition: none !important;
+    top: 30rem !important;
+  }
+  .floating-div-e:nth-of-type(2) {
+    transform: none !important;
+    transition: none !important;
+    top: 34rem !important;
+  }
+  .i-right-e > img:nth-child(1) {
+    transform: scale(1.5);
+    margin-left: 6rem;
+  }
+  .i-right-e > img:nth-child(2) {
+    /* transform: scale(1.5); */
+    /* margin-left: 6rem; */
+    margin-top: 5rem;
+  }
+  .pikachuImg-e {
+    transform: none !important;
+    transition: none !important;
+    /* display: none; */
+    position: static;
+  }
+  .pikaCont-e {
+    position: absolute;
+    margin-left: -7rem;
+    margin-top: -12rem;
+    transform: scale(0.7) !important;
+    width: 200%;
+  }
+  .blur-e {
+    overflow: hidden;
+    /* position: absolute;
+          margin-left: -100%;
+          margin-top: 50%; */
+  }
+  .i-icons-e {
+    margin-left: 4.5rem;
+    margin-top: 3rem;
+  }
+}

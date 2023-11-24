@@ -20,11 +20,22 @@ import { useContext } from "react";
 import Image from "next/image";
 
 import { useSpring, animated } from "react-spring";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 import { Typewriter } from "react-simple-typewriter";
+import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
+
+import Link from "next/link";
 
 export default function Intro() {
+  const [openModal, setOpenModal] = useState(false);
+  const [email, setEmail] = useState("");
+
+  function onCloseModal() {
+    setOpenModal(false);
+    setEmail("");
+  }
+
   const [ref, inView] = useInView({ threshold: 0.5 });
 
   const props = useSpring({
@@ -79,13 +90,21 @@ export default function Intro() {
       >
         <i className="fi fi-brands-whatsapp"></i>
       </a>
+      {/* <Link href="/components/products">
+        <div className="product-float">
+          <div className="product-float-text">Our Products</div>
+        </div>
+      </Link> */}
       <div className="overlay"></div>
 
       <div className="i-left">
         <div className="i-name">
           <span></span>
           <span>
-            Jas Ahuja
+            Jas Ahuja{" "}
+            <span style={{ fontSize: 22, color: "#c9184a", fontWeight: "800" }}>
+              Transformation Coach
+            </span>
             {/* {" "} */}
             {/* <Typewriter
               words={[str1, str2]}
@@ -108,14 +127,27 @@ export default function Intro() {
                 chemical Engineer & then as Corporate Trainer. Later plunged
                 into alternative education, worked with schools in India, East
                 Asia & Europe, and founded an Alternative school too. He has
-                been part of many successful Edtech start-ups.
+                been part of many successful Edtech start-ups
+                <Link href="/components/aboutUs">
+                  {" "}
+                  <span
+                    style={{
+                      color: "#F5DEB3",
+                      fontWeight: "800",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    &nbsp;&nbsp;&nbsp;...read more
+                  </span>
+                </Link>{" "}
               </p>
             </p>
           </p>
         </div>
 
         <div className="add-container">
-          <Link
+          <ScrollLink
             activeStyle={{
               // textDecoration: "none",
               // borderBottom: "4px solid #2a9d8f",
@@ -129,8 +161,8 @@ export default function Intro() {
             offset={-windowHeight / 8}
           >
             <div className="button i-button">Get in touch</div>
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             activeStyle={{
               // textDecoration: "none",
               // borderBottom: "4px solid #2a9d8f",
@@ -147,65 +179,52 @@ export default function Intro() {
               <div className="burst-12"></div>
               <div className="static-content">View Upcoming Events</div>
             </div>
-          </Link>
-          <Link
-            activeStyle={{
-              // textDecoration: "none",
-              // borderBottom: "4px solid #2a9d8f",
-              fontWeight: 700,
-              fontFamily: "Poppins, sans-serif",
-            }}
-            to="upComingEvents"
-            smooth={true}
-            spy={true}
-            activeClass="activeClass"
-            offset={-windowHeight / 8}
-          >
-            <div className="burst-container">
-              <div className="burst-12"></div>
-              <div className="static-content -ml-2">
-                &nbsp;&nbsp;&nbsp;1 - 1&nbsp; &nbsp;&nbsp;Life counselling
-              </div>
+          </ScrollLink>
+
+          <div onClick={() => setOpenModal(true)} className="burst-container">
+            <div className="burst-12"></div>
+            <div className="static-content -ml-1">
+              &nbsp;&nbsp;&nbsp;1 - 1&nbsp; &nbsp;&nbsp;Life &nbsp;Coaching
             </div>
-          </Link>
+          </div>
         </div>
 
         <div className="circular-image-rect">
           <div className="circ-text-cont">
-          <Image
-            src={img5}
-            style={{ objectFit: "cover", objectPosition: "50% 25%" }}
-            className="w-sec-circle"
-            alt={""}
-          />
-          <p className="loc-text underline">Sri Lanka</p>
+            <Image
+              src={img5}
+              style={{ objectFit: "cover", objectPosition: "50% 25%" }}
+              className="w-sec-circle"
+              alt={""}
+            />
+            <p className="loc-text underline">Sri Lanka</p>
           </div>
           <div className="circ-text-cont">
-          <Image
-            src={img3}
-            style={{ objectFit: "cover", objectPosition: "80% 50%" }}
-            className="w-sec-circle"
-            alt={""}
-          />
-           <p className="loc-text underline">Bali Indonesia</p>
+            <Image
+              src={img3}
+              style={{ objectFit: "cover", objectPosition: "80% 50%" }}
+              className="w-sec-circle"
+              alt={""}
+            />
+            <p className="loc-text underline">Bali Indonesia</p>
           </div>
           <div className="circ-text-cont">
-          <Image
-            src={mal}
-            style={{ objectFit: "cover", objectPosition: "50% 25%" }}
-            className="w-sec-circle"
-            alt={""}
-          />
-           <p className="loc-text underline">Maldives</p>
+            <Image
+              src={mal}
+              style={{ objectFit: "cover", objectPosition: "50% 25%" }}
+              className="w-sec-circle"
+              alt={""}
+            />
+            <p className="loc-text underline">Maldives</p>
           </div>
           <div className="circ-text-cont">
-          <Image
-            src={img4}
-            style={{ objectFit: "cover", objectPosition: "50% 25%" }}
-            className="w-sec-circle"
-            alt={""}
-          />
-           <p className="loc-text underline">Milan Italy</p>
+            <Image
+              src={img4}
+              style={{ objectFit: "cover", objectPosition: "50% 25%" }}
+              className="w-sec-circle"
+              alt={""}
+            />
+            <p className="loc-text underline">Milan Italy</p>
           </div>
           {/* <div className="w-sec-circle">
             <Image src={img5} alt="" />
@@ -293,6 +312,65 @@ export default function Intro() {
           className="blur"
         ></div> */}
       </div>
+
+      <Modal
+        show={openModal}
+        size="md"
+        onClose={onCloseModal}
+        popup
+        className="custom-modal"
+      >
+        <Modal.Header className="modal-head" />
+        <Modal.Body className="modal-body">
+          <div className="space-y-6">
+            <h3 className="text-xl font-medium text-gray-900 dark:text-white">
+              Sign in to our platform
+            </h3>
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="email" value="Your email" />
+              </div>
+              <TextInput
+                id="email"
+                placeholder="name@company.com"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="password" value="Your password" />
+              </div>
+              <TextInput id="password" type="password" required />
+            </div>
+            <div className="flex justify-between">
+              <div className="flex items-center gap-2">
+                <Checkbox id="remember" />
+                <Label htmlFor="remember">Remember me</Label>
+              </div>
+              <a
+                href="#"
+                className="text-sm text-cyan-700 hover:underline dark:text-cyan-500"
+              >
+                Lost Password?
+              </a>
+            </div>
+            <div className="w-full">
+              <Button>Log in to your account</Button>
+            </div>
+            <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
+              Not registered?&nbsp;
+              <a
+                href="#"
+                className="text-cyan-700 hover:underline dark:text-cyan-500"
+              >
+                Create account
+              </a>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }

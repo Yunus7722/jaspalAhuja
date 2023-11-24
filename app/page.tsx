@@ -8,6 +8,7 @@ import ContactUs from "./components/contactUs/contactUs";
 import Retreat from "./components/retreat/retreat";
 import Quotes from "./components/quotes/quotes";
 import Offerings from "./components/offerings/offerings";
+// import Products from "./components/products/page";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Achievements />
       <Retreat />
       <Offerings />
+      {/* <Products /> */}
       <Quotes />
       <Gallery />
       <ContactUs />

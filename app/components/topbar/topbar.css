@@ -72,7 +72,7 @@
 .navbar-Menu {
   margin-top: 0px;
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(9, auto);
   grid-gap: 10px;
   list-style: none;
   align-items: center;
@@ -125,6 +125,7 @@ button:hover {
   display: none;
   font-size: 25px;
   color: white;
+  
 }
 
 @media screen and (max-width: 1180px) {

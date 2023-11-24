@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import "tw-elements/dist/css/tw-elements.min.css";
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });

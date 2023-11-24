@@ -1,0 +1,24 @@
+.article-main{
+    background-image: url("../../img/bg5.jpg");
+    background-size: cover; /* This ensures the image covers the entire container */
+    background-position: center; /* Center the image within the container */
+}
+
+.articles-cont{
+    padding: 7rem 0rem;
+}
+
+.articles-cont p,.articles-cont h1{
+    color: white;
+}
+
+
+
+.card-cont-a{
+    background: linear-gradient(
+        to bottom right,
+        rgba(167, 16, 205, 0.9),
+        rgba(50, 5, 100, 0.7)
+      ),
+      linear-gradient(45deg, #ff5733, #6dab50);
+}

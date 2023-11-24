@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.book-body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(90deg, #f9dcc4 52.6%, #581c74 52.6%);
+}
+input {
+  display: none;
+}
+Image {
+  width: 100%;
+  height: 100%;
+}
+.book {
+  display: flex;
+}
+#cover {
+  width: 250px;
+  height: 400px;
+}
+.flip-book {
+  width: 250px;
+  height: 400px;
+  position: relative;
+  perspective: 1500px;
+}
+.flip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: 0.5s;
+  color: #000;
+}
+p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.checkbox {
+  background-color: #fff; /* Your default background color */
+}
+
+/* Style for checked checkbox */
+.checkbox:checked {
+  background-color: #9b089b; /* Your active background color */
+}
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0 13px;
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5) 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 25px 25px 25px 25px;
+}
+
+.front h2 {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 0.3rem 0rem;
+}
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background: #000;
+  border-radius: 25px 25px 25px 25px;
+}
+.next-btn {
+  padding: 0.2rem 1rem;
+  background-color: rgb(155, 8, 155);
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+  border-radius: 25px 25px 25px 25px;
+}
+.back-btn {
+  padding: 0.2rem 1rem;
+  background-color: rgb(155, 8, 155);
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 25px 25px 25px 25px;
+}
+#p1 {
+  z-index: 3;
+}
+#p2 {
+  z-index: 2;
+}
+#p3 {
+  z-index: 1;
+}
+#c1:checked ~ .flip-book #p1 {
+  transform: rotateY(-180deg);
+  z-index: 1;
+}
+#c2:checked ~ .flip-book #p2 {
+  transform: rotateY(-180deg);
+  z-index: 2;
+}
+#c3:checked ~ .flip-book #p3 {
+  transform: rotateY(-180deg);
+  z-index: 3;
+}
+
+.img-book {
+  border-radius: 25px 25px 25px 25px;
+}

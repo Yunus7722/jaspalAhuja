@@ -1,0 +1,122 @@
+.footer-c {
+  /* background-color: #56326F; */
+  background: linear-gradient(
+      to bottom right,
+      #654ea3,
+      #eaafc8
+    ),
+    linear-gradient(360deg, #ff5733, #6dab50);
+  color: white;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousal-image-c {
+  height: 25rem;
+  width: 25rem;
+}
+
+.topRow-footer-c {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 86%;
+}
+
+.topRow-footer-c h1 {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.topRow-footer-c p {
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+.topRow-footer-c a {
+  text-align: left;
+}
+.topRow-footer-c i {
+  color: white;
+  padding: 1.2rem;
+  font-size: 3rem;
+  transition: 0.3s ease-in-out;
+  /* Apply the transition here */
+}
+
+.topRow-footer-c i:hover {
+  color: bisque;
+  font-size: 4rem;
+}
+
+.bottomRow-footer-c {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  /* grid-gap: 40px; */
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
+  /* width: 80%; */
+}
+
+.bottomRow-footer-c h4 {
+  text-align: left;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.bottomRow-footer-c a {
+  text-align: left;
+  text-decoration: none;
+  color: wheat;
+  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.bottomRow-footer-c a:hover {
+  color: white;
+}
+
+.bottomRow-footer-c div {
+  /* text-align: left;    */
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 850px) {
+  .footer-c {
+    padding: 4rem 2rem;
+  }
+  .iconCont-c {
+    margin-left: -15px;
+  }
+
+  .bottomRow-c div {
+    width: 40%;
+  }
+
+  .topRow-footer-c i {
+    color: white;
+    padding: 0.8rem;
+    font-size: 2rem;
+    /* transition: 0.3s ease-in-out;  */
+    /* Apply the transition here */
+  }
+
+  .topRow-footer-c i:hover {
+    color: bisque;
+    font-size: 2.2rem;
+  }
+
+  .topRow-footer-c h1 {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+}

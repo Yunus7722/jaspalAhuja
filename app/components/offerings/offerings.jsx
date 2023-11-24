@@ -202,7 +202,57 @@ const Solutions_and_services = () => {
 
       <div className="secondRow">
         <div className="cardMain">
-          <h2 className="headerText">Retreats & Programs for Students </h2>
+          <h2 className="headerText">Retreats & Programs for Youngsters </h2>
+
+          <p className="paraText">• Life Skills: financial literacy,</p>
+          <p className="paraText" style={{ marginRight: "-2rem" }}>
+            time management, and basic Skills.
+          </p>
+          <p className="paraText">• Critical thinking, problem-</p>
+          <p className="paraText" style={{ marginRight: "-2rem" }}>
+            solving & decision-making.
+          </p>
+          <p className="paraText">• Social Skills Empathy,</p>
+          <p className="paraText" style={{ marginRight: "-2rem" }}>
+            & building healthy relationships.
+          </p>
+
+          <a
+            className="hyperLink"
+            onClick={() => document.getElementById("my_modal_4").showModal()}
+          >
+            Learn more
+          </a>
+          <div className="button i-button">Apply Here</div>
+        </div>
+
+        <div className="cardMain">
+          <h2 className="headerText">Retreats & Programs for Teachers </h2>
+
+          <p className="paraText">• Life Skills: financial literacy,</p>
+          <p className="paraText" style={{ marginRight: "-2rem" }}>
+            time management, and basic Skills.
+          </p>
+          <p className="paraText">• Critical thinking, problem-</p>
+          <p className="paraText" style={{ marginRight: "-2rem" }}>
+            solving & decision-making.
+          </p>
+          <p className="paraText">• Social Skills Empathy,</p>
+          <p className="paraText" style={{ marginRight: "-2rem" }}>
+            & building healthy relationships.
+          </p>
+
+          <a
+            className="hyperLink"
+            onClick={() => document.getElementById("my_modal_4").showModal()}
+          >
+            Learn more
+          </a>
+          <div className="button i-button">Apply Here</div>
+        </div>
+
+        <div className="cardMain">
+          <h2 className="headerText">Retreats & Programs for Parents </h2>
 
           <p className="paraText">• Life Skills: financial literacy,</p>
           <p className="paraText" style={{ marginRight: "-2rem" }}>
