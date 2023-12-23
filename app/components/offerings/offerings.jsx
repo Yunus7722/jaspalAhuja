@@ -4,6 +4,18 @@ import React, { useState } from "react";
 import "./offerings.css";
 
 const Solutions_and_services = () => {
+  var applyText1 =
+    "Hi Ahuja i want to discuss regarding Counseling session regarding corporate trainings ";
+  var applyText2 =
+    "Hi Ahuja i want to discuss regarding Counseling session regarding Open Retreats ";
+  var applyText3 =
+    "Hi Ahuja i want to discuss regarding Counseling session regarding Retreats for Housewives ";
+  var applyText4 =
+    "Hi Ahuja i want to discuss regarding Counseling session regarding  Retreats for Youngsters ";
+  var applyText5 =
+    "Hi Ahuja i want to discuss regarding Counseling session regarding  Retreats for T eachers ";
+  var applyText6 =
+    "Hi Ahuja i want to discuss regarding Counseling session regarding  Retreats for Parents ";
   return (
     <div id="offerings" className="mainContainer">
       <div className="mainHeader underline">Our Offerings</div>
@@ -29,6 +41,10 @@ const Solutions_and_services = () => {
           <p className="paraText" style={{ marginRight: "-2rem" }}>
             Productivity
           </p>
+          <p className="paraText">• Customized Training</p>
+          {/* <p className="paraText" style={{ marginRight: "-2rem" }}>
+            
+          </p> */}
           {/* <p className="paraText" style={{ marginRight: "-2rem" }}>
            
           </p> */}
@@ -39,7 +55,17 @@ const Solutions_and_services = () => {
             Learn more
           </a>
 
-          <div className="button i-button">Apply Here</div>
+          <a
+            // href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
+            href={`https://wa.me/+919844290460?text=${encodeURIComponent(
+              applyText1
+            )}`}
+            className="floating-e"
+            target="_blank"
+          >
+            {" "}
+            <div className="button i-button">Apply Here</div>
+          </a>
         </div>
 
         {/* Open the modal using document.getElementById('ID').showModal() method */}
@@ -111,8 +137,17 @@ const Solutions_and_services = () => {
           >
             Learn more
           </a>
-          <div className="button i-button">Apply Here</div>
-        </div>
+          <a
+            // href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
+            href={`https://wa.me/+919844290460?text=${encodeURIComponent(
+              applyText2
+            )}`}
+            className="floating-e"
+            target="_blank"
+          >
+            {" "}
+            <div className="button i-button">Apply Here</div>
+          </a>        </div>
 
         {/* Open the modal using document.getElementById('ID').showModal() method */}
 
@@ -162,8 +197,17 @@ const Solutions_and_services = () => {
           >
             Learn more
           </a>
-          <div className="button i-button">Apply Here</div>
-        </div>
+          <a
+            // href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
+            href={`https://wa.me/+919844290460?text=${encodeURIComponent(
+              applyText3
+            )}`}
+            className="floating-e"
+            target="_blank"
+          >
+            {" "}
+            <div className="button i-button">Apply Here</div>
+          </a>        </div>
       </div>
 
       {/* Open the modal using document.getElementById('ID').showModal() method */}
@@ -223,8 +267,17 @@ const Solutions_and_services = () => {
           >
             Learn more
           </a>
-          <div className="button i-button">Apply Here</div>
-        </div>
+          <a
+            // href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
+            href={`https://wa.me/+919844290460?text=${encodeURIComponent(
+              applyText4
+            )}`}
+            className="floating-e"
+            target="_blank"
+          >
+            {" "}
+            <div className="button i-button">Apply Here</div>
+          </a>        </div>
 
         <div className="cardMain">
           <h2 className="headerText">Retreats & Programs for Teachers </h2>
@@ -248,8 +301,17 @@ const Solutions_and_services = () => {
           >
             Learn more
           </a>
-          <div className="button i-button">Apply Here</div>
-        </div>
+          <a
+            // href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
+            href={`https://wa.me/+919844290460?text=${encodeURIComponent(
+              applyText5
+            )}`}
+            className="floating-e"
+            target="_blank"
+          >
+            {" "}
+            <div className="button i-button">Apply Here</div>
+          </a>        </div>
 
         <div className="cardMain">
           <h2 className="headerText">Retreats & Programs for Parents </h2>
@@ -273,8 +335,17 @@ const Solutions_and_services = () => {
           >
             Learn more
           </a>
-          <div className="button i-button">Apply Here</div>
-        </div>
+          <a
+            // href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
+            href={`https://wa.me/+919844290460?text=${encodeURIComponent(
+              applyText6
+            )}`}
+            className="floating-e"
+            target="_blank"
+          >
+            {" "}
+            <div className="button i-button">Apply Here</div>
+          </a>        </div>
 
         {/* Open the modal using document.getElementById('ID').showModal() method */}
 

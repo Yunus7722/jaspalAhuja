@@ -4,12 +4,24 @@
     background-position: center; /* Center the image within the container */
 }
 
+.article-cont{
+    background: linear-gradient(
+        to bottom left,
+        #ffa5ab,
+        #e5b2ff,
+        #a5efff
+      ),
+      linear-gradient(360deg, #ff5733, #6dab50);
+      border: white 2px solid;
+}
+
+
 .articles-cont{
     padding: 7rem 0rem;
 }
 
 .articles-cont p,.articles-cont h1{
-    color: white;
+    color: #652F80;
 }
 
 

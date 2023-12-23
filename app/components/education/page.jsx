@@ -83,11 +83,14 @@ export default function Education() {
 
   var str1 = "Jaspal Singh Ahuja";
   var str2 = "Jaspal Singh Ahuja";
+  const dynamicText = `Hi Jas, let's discuss`;
+
   return (
     <main>
       <div className="intro-e" id="Home">
         <a
-          href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
+          // href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
+          href={`https://wa.me/+919844290460?text=${encodeURIComponent(dynamicText)}`}
           className="floating-e"
           target="_blank"
         >

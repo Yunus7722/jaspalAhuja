@@ -7,6 +7,10 @@
   background-position: center; /* Center the image within the container */
 }
 
+.paraText-start{
+  color: black !important;
+}
+
 .modal-head {
   background: linear-gradient(to bottom left, #6a82fb, #fc5c7d);
 }
@@ -64,7 +68,7 @@
   /* ,linear-gradient(45deg, #ff5733, #6dab50); */
   background-color: #c9184a;
   width: 100%;
-  height: 100%;
+  height: 110%;
   position: absolute;
   text-align: center;
   animation: rotate 10s linear infinite;

@@ -1,8 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import "./topbar.css";
-import { Link as ScrollLink} from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
+import Image from "next/image";
+// import { useRouter } from "next/router";
+import logo from '../../img/jasLogo.png';
 
 function Navbar() {
   const [clicked, setClicked] = useState(true);
@@ -30,6 +33,34 @@ function Navbar() {
       window.removeEventListener("resize", updateWindowHeight); // Clean up the event listener
     };
   }, []);
+
+  // //for Spinner with Routing
+
+  // const [loading, setLoading] = useState(false);
+  // const router = useRouter();
+
+  // const handleSpinClick = () => {
+  //   setLoading(true);
+  // };
+
+  // useEffect(() => {
+  //   const handleRouteChangeStart = () => setLoading(true);
+  //   const handleRouteChangeComplete = () => setLoading(false);
+
+  //   router.events.on("routeChangeStart", handleRouteChangeStart);
+  //   router.events.on("routeChangeComplete", handleRouteChangeComplete);
+
+  //   return () => {
+  //     router.events.off("routeChangeStart", handleRouteChangeStart);
+  //     router.events.off("routeChangeComplete", handleRouteChangeComplete);
+  //   };
+  // }, [router]);
+
+  // // to handle both the Clicks
+  // const handleBothClicks = () => {
+  //   handleMenuClick();
+  //   handleSpinClick();
+  // };
 
   // Define your menuItems as before
   const menuItems = [
@@ -93,10 +124,10 @@ function Navbar() {
 
   return (
     <nav className="navbar-Items">
-      {/* <h1 className="navbar-Logo">
-        Jas Ahuja,s
-        <p> Life Transformation Trainings & Retreats worldwide</p>
-      </h1> */}
+      <h1 className="navbar-Logo">
+       <Image src={logo} alt={""}/>
+       
+      </h1>
       <div className="menu-Icons" onClick={handleClick}>
         <i
           className={clicked ? "fi fi-br-menu-burger" : "fi fi-sr-circle-xmark"}
@@ -141,36 +172,6 @@ function Navbar() {
           </ScrollLink>
         </li>
         {/* Add other menu items in a similar way */}
-
-        <li>
-        <Link
-           onClick={handleMenuClick}
-           className="nav-Links"
-          href='/components/articles'
-          >
-            Articles
-          </Link>
-        </li>
-        <li>
-        <Link
-           onClick={handleMenuClick}
-           className="nav-Links"
-          href='/components/books'
-          >
-            Books
-          </Link>
-        </li>
-        {/* Add other menu items in a similar way */}
-
-        <li>
-        <Link
-           onClick={handleMenuClick}
-           className="nav-Links"
-          href='/components/education'
-          >
-            Education
-          </Link>
-        </li>
         <li>
           <ScrollLink
             activeStyle={{
@@ -189,34 +190,55 @@ function Navbar() {
             </a>
           </ScrollLink>
         </li>
+        <li>
+          <Link
+            onClick={handleMenuClick}
+            className="nav-Links"
+            href="/components/articles"
+          >
+            Articles
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={handleMenuClick}
+            className="nav-Links"
+            href="/components/books"
+          >
+            Books
+          </Link>
+        </li>
         {/* Add other menu items in a similar way */}
 
         <li>
           <Link
-           onClick={handleMenuClick}
-           className="nav-Links"
-          href='/components/products'
+            onClick={handleMenuClick}
+            className="nav-Links"
+            href="/components/education"
+          >
+            Education
+          </Link>
+        </li>
+
+        {/* Add other menu items in a similar way */}
+
+        <li>
+          <Link
+            onClick={handleMenuClick}
+            className="nav-Links"
+            href="/components/products"
           >
             Shop
           </Link>
         </li>
         <li>
-          <ScrollLink
-            activeStyle={{
-              textDecoration: "none",
-              backgroundColor: "#EA698B",
-              borderRadius: "50px",
-              padding: "0.7rem 0rem",
-            }}
-            to="Feats"
-            smooth={true}
-            spy={true}
-            activeClass="activeClass"
+        <Link
+            onClick={handleMenuClick}
+            className="nav-Links"
+            href="/components/donation"
           >
-            <a className="nav-Links" onClick={handleMenuClick}>
-              Jas Foundation
-            </a>
-          </ScrollLink>
+            Jas Foundation
+          </Link>
         </li>
         <li>
           <ScrollLink

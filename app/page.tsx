@@ -16,8 +16,8 @@ export default function Home() {
       <TopBar /> {/* Include the TopBar component here */}
       <Hero />
       <Achievements />
-      <Retreat />
       <Offerings />
+      <Retreat />
       {/* <Products /> */}
       <Quotes />
       <Gallery />

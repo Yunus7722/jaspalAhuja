@@ -14,26 +14,44 @@ function AboutUs() {
           <h2 className="headerText-a underline">About Us</h2>
 
           <p className="paraText-a">
-            <span style={{ marginLeft: "-1rem" }}>•</span> Jas Ahuja grew up
-            seeing Taj Mahal from his Terrace, as bright young man started
-            writing poetry & Composing Songs while graduated from IIT Roorkee in
-            Mech Engg. Worked as Petrochemical Engineer for 5 yrs & another 5
-            yrs as HR corporate Trainer, while pursuing Ph D in HR insspired by
-            inner calling & right Education, plunged into alternative education,
-            worked & spent time with various Boarding Scools in India, Thailand,
-            England, & then started Ones own Alternative School in Bangalore,
-            and cafe wisdom! has also been part of Two Successful Edtech
-            Start-ups.
+            <span style={{ marginLeft: "-1rem" }}>•</span> From his terrace
+            overlooking the Taj Mahal's ethereal beauty, Jas Ahuja's creative
+            spirit bloomed and blossomed into a poet and songwriter by 16,
+            conquering the academic realm at IIT Roorkee with a degree in
+            Mechanical Engineering. He then navigated the worlds of
+            petrochemicals and corporate training, all while pursuing a Ph.D. in
+            HR. But a thirst for deeper understanding & heeding the whispers of
+            his heart, Jas embarked on a quest for alternative education,
+            immersing himself in diverse philosophies and practices both within
+            India and beyond. He explored wisdom from all corners of the globe,
+            then built his own wonderland – an alternative school in Bangalore
+            and a cafe that brews knowledge like the finest chai, testaments to
+            his passion for holistic learning and connection. His
+            entrepreneurial spirit found wings in successful Edtech ventures,
+            where his leadership spearheaded record-breaking sales campaigns and
+            brought him effortless abundance. Now, for nearly two decades, Jas
+            has crafted a life woven from love, ultimate freedom, and purpose,
+            living each day in harmony surrounded by those who resonate with his
+            soul.
           </p>
+
           <p className="paraText-a">
-            <span style={{ marginLeft: "-1rem" }}>•</span> where than Travelled
-            Across the Nation and carried out, out of the worl in Sales Feats!
-          </p>
-          <p className="paraText-a">
-            <span style={{ marginLeft: "-1rem" }}>•</span> Created Reasonable
-            wealth in just few first years of corrporate world & almost last two
-            decades enjoying lifetime holiday, doing & living in daily life ,
-            what i love to do, in effortless, timeless manner!
+            <span style={{ marginLeft: "-1rem" }}>• </span>
+            Since the dawn of consciousness, Jas Ahuja has been on a sacred
+            pilgrimage, a mission to seek truth, spread
+            righteousness, and paint the world with a brush dipped in wisdom.
+            This voyage has unearthed countless glittering gems of wisdom and
+            yielded an abundance of profound insights. Along the way, encounters
+            with enlightened masters, incredible mentors and solitary immersions
+            in nature's mystical splendor and majestic glory, unearthed many
+            life secrets that led to joy, beauty, and unshakeable peace, so
+            deep, seems now it can't be ruffled by anything, big or small. Now,
+            standing bathed in this transformative light, Jas is sharing this
+            mind blowing understanding and guiding others towards wholeness &
+            happiness through transformative trainings, one to one coaching,
+            counseling, and Experiential retreats across the globe. They're like
+            magic, but real, and happening all over the world. You are invited
+            to partake in this journey of Transforming your life with Jas!
           </p>
         </div>
       </div>

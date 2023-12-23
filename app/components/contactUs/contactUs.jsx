@@ -3,7 +3,7 @@ import "./contactUs.css";
 import Link from "next/link";
 import Image from "next/image";
 
-import img from "../../img/co.png";
+import img from "../../img/contact_us_.png";
 
 function contactUs() {
   return (

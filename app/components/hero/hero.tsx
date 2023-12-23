@@ -81,10 +81,13 @@ export default function Intro() {
 
   var str1 = "Jaspal Singh Ahuja";
   var str2 = "Jaspal Singh Ahuja";
+
+  const dynamicText = `Hi Jas, let's discuss`;
   return (
     <div className="intro" id="Home">
       <a
-        href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
+        // href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
+        href={`https://wa.me/+919844290460?text=${encodeURIComponent(dynamicText)}`}
         className="floating"
         target="_blank"
       >
@@ -119,15 +122,27 @@ export default function Intro() {
              
             </b> */}
             <p>
-              {" "}
+              {/* {" "}
               Wisdom Wealth & Wellness Wizard! Relationship Counselor & Life
-              Coach!{" "}
-              <p>
-                Graduated from IIT Roorkee in Mech. Engg, worked as Petro
-                chemical Engineer & then as Corporate Trainer. Later plunged
-                into alternative education, worked with schools in India, East
-                Asia & Europe, and founded an Alternative school too. He has
-                been part of many successful Edtech start-ups
+              Coach!{" "} */}
+              <p className="paraText-start">
+                Jas Ahuja, an IITian, spiritual traveler since the dawn of his
+                consciousness, with the wisdom of a sage, the prosperity of a
+                Midas, and the well-being of a yogi, delved into petrochemicals
+                and sculpted the human landscape as a corporate trainer. Driven
+                by an insatiable thirst for knowledge, embarked on a global
+                odyssey of the transformative power of alternative education and
+                orchestrated the success of numerous Edtech start-ups. This holistic
+                voyage and meetings with masters unearthed countless glittering
+                gems of wisdom and yielded an abundance of profound insights.
+                Standing bathed in this transformative light, Jas Ahuja is sharing
+                this mind blowing understanding and guiding others towards
+                wholeness & Happiness.{" "}
+                
+                <span style={{ fontWeight: "bold", fontSize: "15px" ,fontStyle:'italic',color:'black' }}>
+                  {" "}
+                  You are invited to partake in this journey of Transformation.
+                </span>
                 <Link href="/components/aboutUs">
                   {" "}
                   <span
@@ -147,7 +162,7 @@ export default function Intro() {
         </div>
 
         <div className="add-container">
-          <ScrollLink
+          {/* <ScrollLink
             activeStyle={{
               // textDecoration: "none",
               // borderBottom: "4px solid #2a9d8f",
@@ -161,6 +176,24 @@ export default function Intro() {
             offset={-windowHeight / 8}
           >
             <div className="button i-button">Get in touch</div>
+          </ScrollLink> */}
+          <ScrollLink
+            activeStyle={{
+              // textDecoration: "none",
+              // borderBottom: "4px solid #2a9d8f",
+              fontWeight: 700,
+              fontFamily: "Poppins, sans-serif",
+            }}
+            to="upComingEvents"
+            smooth={true}
+            spy={true}
+            activeClass="activeClass"
+            offset={-windowHeight / 8}
+          >
+            <div className="burst-container">
+              <div className="burst-12"></div>
+              <div className="static-content">Ask for 1-1 Counseling</div>
+            </div>
           </ScrollLink>
           <ScrollLink
             activeStyle={{
@@ -184,7 +217,8 @@ export default function Intro() {
           <div onClick={() => setOpenModal(true)} className="burst-container">
             <div className="burst-12"></div>
             <div className="static-content -ml-1">
-              &nbsp;&nbsp;&nbsp;1 - 1&nbsp; &nbsp;&nbsp;Life &nbsp;Coaching
+              &nbsp;&nbsp;&nbsp;Ask for &nbsp; &nbsp;&nbsp;&nbsp;1 - 1
+              &nbsp;&nbsp;&nbsp;&nbsp; Life &nbsp;Coaching
             </div>
           </div>
         </div>

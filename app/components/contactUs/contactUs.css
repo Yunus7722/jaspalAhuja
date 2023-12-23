@@ -1,4 +1,5 @@
 .contact-container {
+ 
   display: flex;
   flex-direction: row;
   height: 40rem;
@@ -18,7 +19,7 @@
 
 .contact-right {
     padding: 0rem 1rem 0rem 1rem;
-  flex: 6;
+  flex: 4;
   display: flex;
   flex-direction: column;
 }
