@@ -1,6 +1,6 @@
 .intro {
   display: flex;
-  height: 50rem;
+  height: 55rem;
   /* margin-top: 6rem; */
   background-image: url("../../img/bg5.jpg");
   background-size: cover; /* This ensures the image covers the entire container */
@@ -197,7 +197,7 @@
   left: 0;
   width: 100%;
   /* 105+70  here adding overlay for throughout*/
-  height: 50rem;
+  height: 55rem;
   background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
   z-index: 0; /* Adjust the z-index to ensure it's above other content */
   pointer-events: none; /* Allows interaction with elements beneath the overlay */

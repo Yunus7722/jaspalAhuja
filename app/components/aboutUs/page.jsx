@@ -15,7 +15,7 @@ function AboutUs() {
 
           <p className="paraText-a">
             <span style={{ marginLeft: "-1rem" }}>•</span> From his terrace
-            overlooking the Taj Mahal's ethereal beauty, Jas Ahuja's creative
+            overlooking the Taj Mahal&rsquo;s ethereal beauty, Jas Ahuja&rsquo;s creative
             spirit bloomed and blossomed into a poet and songwriter by 16,
             conquering the academic realm at IIT Roorkee with a degree in
             Mechanical Engineering. He then navigated the worlds of
@@ -32,7 +32,7 @@ function AboutUs() {
             brought him effortless abundance. Now, for nearly two decades, Jas
             has crafted a life woven from love, ultimate freedom, and purpose,
             living each day in harmony surrounded by those who resonate with his
-            soul.
+            soul.{}
           </p>
 
           <p className="paraText-a">
@@ -43,13 +43,13 @@ function AboutUs() {
             This voyage has unearthed countless glittering gems of wisdom and
             yielded an abundance of profound insights. Along the way, encounters
             with enlightened masters, incredible mentors and solitary immersions
-            in nature's mystical splendor and majestic glory, unearthed many
+            in nature&rsquo;s mystical splendor and majestic glory, unearthed many
             life secrets that led to joy, beauty, and unshakeable peace, so
-            deep, seems now it can't be ruffled by anything, big or small. Now,
+            deep, seems now it can&rsquo;t be ruffled by anything, big or small. Now,
             standing bathed in this transformative light, Jas is sharing this
             mind blowing understanding and guiding others towards wholeness &
             happiness through transformative trainings, one to one coaching,
-            counseling, and Experiential retreats across the globe. They're like
+            counseling, and Experiential retreats across the globe. They&rsquo;re like
             magic, but real, and happening all over the world. You are invited
             to partake in this journey of Transforming your life with Jas!
           </p>

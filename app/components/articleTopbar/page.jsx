@@ -75,7 +75,7 @@ function ArticleTopbar() {
   return (
     <nav className="navbar-Items-a">
       <h1 className="navbar-Logo-a">
-        Jas Ahuja,s
+        Jas Ahuja&rsquo;s
         <p> Articles</p>
       </h1>
       <div className="menu-Icons-a" onClick={handleClick}>
