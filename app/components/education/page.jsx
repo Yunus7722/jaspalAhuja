@@ -241,21 +241,21 @@ export default function Education() {
           <div className="i-icons-e">
             <a
               style={{ textDecoration: "none", color: "inherit" }}
-              href="https://github.com/Yunus7722"
+              href=""
             >
               {" "}
               <i className="fa-brands fa-github"></i>
             </a>
             <a
               style={{ textDecoration: "none", color: "inherit" }}
-              href="https://www.linkedin.com/in/mohammed-yunus-8157a1218/"
+              href="https://www.linkedin.com/in/jaspal-singh-ahuja-a60b6612/"
             >
               {" "}
               <i className="fa-brands fa-linkedin"></i>
             </a>
             <a
               style={{ textDecoration: "none", color: "inherit" }}
-              href="https://www.linkedin.com/in/mohammed-yunus-8157a1218/"
+              href="https://www.linkedin.com/in/jaspal-singh-ahuja-a60b6612/"
             >
               {" "}
               <i className="fa-brands fa-square-instagram"></i>

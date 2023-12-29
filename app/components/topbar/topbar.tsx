@@ -5,7 +5,9 @@ import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 import Image from "next/image";
 // import { useRouter } from "next/router";
-import logo from '../../img/jasLogo.png';
+// import logo from '../../img/jasLogo.png';
+import logo from '../../img/logo_jas_f.png';
+// import logo from '../../img/logo_jas_2.png';
 
 function Navbar() {
   const [clicked, setClicked] = useState(true);
@@ -125,7 +127,7 @@ function Navbar() {
   return (
     <nav className="navbar-Items">
       <h1 className="navbar-Logo">
-       <Image src={logo} alt={""}/>
+       <Image className="navbar-logo-img" src={logo} alt={""}/>
        
       </h1>
       <div className="menu-Icons" onClick={handleClick}>

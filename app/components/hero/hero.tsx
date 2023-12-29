@@ -1,6 +1,6 @@
 "use client";
 import "./hero.css";
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import imgDesign from "../../img/abstract2.png";
 import imgPic from "../../img/ProfilePIcY.png";
 import crown from "../../img/crown.png";
@@ -23,17 +23,81 @@ import { useSpring, animated } from "react-spring";
 import { Link as ScrollLink } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 import { Typewriter } from "react-simple-typewriter";
-import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
+import {
+  Button,
+  Checkbox,
+  Label,
+  Modal,
+  TextInput,
+  Textarea,
+} from "flowbite-react";
 
 import Link from "next/link";
 
 export default function Intro() {
+  // const [query, setQuery] = useState("Hello world");
+
+  // for Coaching
+  const handleQueryChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setQuery(event.target.value);
+  };
+
+  const [name, setName] = useState("");
+  const [query, setQuery] = useState("Hi Jas Ahuja, My name is _");
+
+  const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const newName = event.target.value;
+    setName(newName);
+    setQuery(`Hi Jas Ahuja, My name is  ${newName}`);
+  };
+
+  const whatsappForLiveCoaching = () => {
+    const whatsappBase = "https://wa.me/+919844290460";
+    const encodedQuery = encodeURIComponent(`${query}`);
+    const encodedSubject = encodeURIComponent("Subject : Coaching");
+
+    return `${whatsappBase}?text=${encodedQuery}%0A${encodedSubject}`;
+  };
+  // for Counselling
+  const handleQueryChangeCounselling = (
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
+    setQueryCounselling(event.target.value);
+  };
+
+  const [nameCounselling, setNameCounselling] = useState("");
+  const [queryCounselling, setQueryCounselling] = useState(
+    "Hi Jas Ahuja, My name is _"
+  );
+
+  const handleNameChangeCounselling = (
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
+    const newNameCounselling = event.target.value;
+    setNameCounselling(newNameCounselling);
+    setQueryCounselling(`Hi Jas Ahuja, My name is  ${newNameCounselling}`);
+  };
+
+  const whatsappForLiveCoachingCounselling = () => {
+    const whatsappBase = "https://wa.me/+919844290460";
+    const encodedQueryCounselling = encodeURIComponent(`${queryCounselling}`);
+    const encodedSubjectCounselling = encodeURIComponent(
+      "Subject : Counselling"
+    );
+
+    return `${whatsappBase}?text=${encodedQueryCounselling}%0A${encodedSubjectCounselling}`;
+  };
+
   const [openModal, setOpenModal] = useState(false);
+  const [openModalCounselling, setOpenModalCounselling] = useState(false);
+
   const [email, setEmail] = useState("");
 
   function onCloseModal() {
     setOpenModal(false);
-    setEmail("");
+  }
+  function onCloseModalCouncelling() {
+    setOpenModalCounselling(false);
   }
 
   const [ref, inView] = useInView({ threshold: 0.5 });
@@ -87,7 +151,9 @@ export default function Intro() {
     <div className="intro" id="Home">
       <a
         // href="https://wa.me/+919844290460?text=Hi%20Jas%20Ahuja%20let's%20Discuss"
-        href={`https://wa.me/+919844290460?text=${encodeURIComponent(dynamicText)}`}
+        href={`https://wa.me/+919844290460?text=${encodeURIComponent(
+          dynamicText
+        )}`}
         className="floating"
         target="_blank"
       >
@@ -132,14 +198,20 @@ export default function Intro() {
                 and sculpted the human landscape as a corporate trainer. Driven
                 by an insatiable thirst for knowledge, embarked on a global
                 odyssey of the transformative power of alternative education and
-                orchestrated the success of numerous Edtech start-ups. This holistic
-                voyage and meetings with masters unearthed countless glittering
-                gems of wisdom and yielded an abundance of profound insights.
-                Standing bathed in this transformative light, Jas Ahuja is sharing
-                this mind blowing understanding and guiding others towards
-                wholeness & Happiness.{" "}
-                
-                <span style={{ fontWeight: "bold", fontSize: "15px" ,fontStyle:'italic',color:'black' }}>
+                orchestrated the success of numerous Edtech start-ups. This
+                holistic voyage and meetings with masters unearthed countless
+                glittering gems of wisdom and yielded an abundance of profound
+                insights. Standing bathed in this transformative light, Jas
+                Ahuja is sharing this mind blowing understanding and guiding
+                others towards wholeness & Happiness.{" "}
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "15px",
+                    fontStyle: "italic",
+                    color: "black",
+                  }}
+                >
                   {" "}
                   You are invited to partake in this journey of Transformation.
                 </span>
@@ -177,24 +249,22 @@ export default function Intro() {
           >
             <div className="button i-button">Get in touch</div>
           </ScrollLink> */}
-          <ScrollLink
-            activeStyle={{
-              // textDecoration: "none",
-              // borderBottom: "4px solid #2a9d8f",
-              fontWeight: 700,
-              fontFamily: "Poppins, sans-serif",
-            }}
-            to="upComingEvents"
-            smooth={true}
-            spy={true}
-            activeClass="activeClass"
-            offset={-windowHeight / 8}
+
+          <div
+            onClick={() => setOpenModalCounselling(true)}
+            className="burst-container"
           >
-            <div className="burst-container">
-              <div className="burst-12"></div>
-              <div className="static-content">Ask for 1-1 Counseling</div>
+            <div className="burst-12"></div>
+            <div className="static-content">Ask for 1-1 Counselling</div>
+          </div>
+
+          <div onClick={() => setOpenModal(true)} className="burst-container">
+            <div className="burst-12"></div>
+            <div className="static-content -ml-1">
+              &nbsp;&nbsp;&nbsp;Ask for &nbsp; &nbsp;&nbsp;&nbsp;1 - 1
+              &nbsp;&nbsp;&nbsp;&nbsp; Life &nbsp;Coaching
             </div>
-          </ScrollLink>
+          </div>
           <ScrollLink
             activeStyle={{
               // textDecoration: "none",
@@ -213,17 +283,56 @@ export default function Intro() {
               <div className="static-content">View Upcoming Events</div>
             </div>
           </ScrollLink>
+        </div>
 
-          <div onClick={() => setOpenModal(true)} className="burst-container">
-            <div className="burst-12"></div>
-            <div className="static-content -ml-1">
-              &nbsp;&nbsp;&nbsp;Ask for &nbsp; &nbsp;&nbsp;&nbsp;1 - 1
-              &nbsp;&nbsp;&nbsp;&nbsp; Life &nbsp;Coaching
+        <div className="vector-img-cont">
+          <div className="vector-cont-indi">
+            <div className="t-image-h">
+              <Image
+                src={img5}
+                style={{ objectFit: "cover", objectPosition: "50% 25%" }}
+                className="w-sec-circle-h"
+                alt={""}
+              />{" "}
             </div>
+            <span>Sri Lanka</span>
+          </div>
+          <div className="vector-cont-indi">
+            <div className="t-image-h">
+              <Image
+                src={img3}
+                style={{ objectFit: "cover", objectPosition: "80% 50%" }}
+                className="w-sec-circle-h"
+                alt={""}
+              />{" "}
+            </div>
+            <span>Bali Indonesia</span>
+          </div>
+          <div className="vector-cont-indi">
+            <div className="t-image-h">
+              <Image
+                src={mal}
+                style={{ objectFit: "cover", objectPosition: "50% 25%" }}
+                className="w-sec-circle-h"
+                alt={""}
+              />{" "}
+            </div>
+            <span>Maldives</span>
+          </div>
+          <div className="vector-cont-indi">
+            <div className="t-image-h">
+              <Image
+                src={img4}
+                style={{ objectFit: "cover", objectPosition: "50% 25%" }}
+                className="w-sec-circle-h"
+                alt={""}
+              />{" "}
+            </div>
+            <span>Milan Italy</span>
           </div>
         </div>
 
-        <div className="circular-image-rect">
+        {/* <div className="circular-image-rect">
           <div className="circ-text-cont">
             <Image
               src={img5}
@@ -260,10 +369,8 @@ export default function Intro() {
             />
             <p className="loc-text underline">Milan Italy</p>
           </div>
-          {/* <div className="w-sec-circle">
-            <Image src={img5} alt="" />
-          </div> */}
-        </div>
+         
+        </div> */}
 
         {/* <div
           className=""
@@ -284,23 +391,20 @@ export default function Intro() {
         </div> */}
 
         <div className="i-icons">
-          <a
-            style={{ textDecoration: "none", color: "inherit" }}
-            href="https://github.com/Yunus7722"
-          >
+          <a style={{ textDecoration: "none", color: "inherit" }} href="">
             {" "}
             <i className="fa-brands fa-github"></i>
           </a>
           <a
             style={{ textDecoration: "none", color: "inherit" }}
-            href="https://www.linkedin.com/in/mohammed-yunus-8157a1218/"
+            href="https://www.linkedin.com/in/jaspal-singh-ahuja-a60b6612/"
           >
             {" "}
             <i className="fa-brands fa-linkedin"></i>
           </a>
           <a
             style={{ textDecoration: "none", color: "inherit" }}
-            href="https://www.linkedin.com/in/mohammed-yunus-8157a1218/"
+            href="https://www.linkedin.com/in/jaspal-singh-ahuja-a60b6612/"
           >
             {" "}
             <i className="fa-brands fa-square-instagram"></i>
@@ -358,48 +462,102 @@ export default function Intro() {
         <Modal.Body className="modal-body">
           <div className="space-y-6">
             <h3 className="text-xl font-medium text-gray-900 dark:text-white">
-              Sign in to our platform
+              Ask for One to One Life Coaching
             </h3>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="email" value="Your email" />
+            <form id="liveCoaching">
+              <div>
+                <div className="mb-2 block">
+                  <Label htmlFor="name" value="Your Name" />
+                </div>
+                <TextInput
+                  placeholder="Ex : James"
+                  id="name"
+                  type="text"
+                  value={name}
+                  onInput={handleNameChange}
+                  required
+                />
+
+                <div>
+                  <div className="mb-2 block">
+                    <Label htmlFor="query" value="Write your query" />
+                  </div>
+                  <Textarea
+                    className="px-2 py-2 text-base"
+                    id="query"
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                    required
+                    rows={3} // Set the number of rows as needed
+                    cols={30} // Set the number of columns as needed
+                  />
+                </div>
               </div>
-              <TextInput
-                id="email"
-                placeholder="name@company.com"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="password" value="Your password" />
-              </div>
-              <TextInput id="password" type="password" required />
-            </div>
-            <div className="flex justify-between">
-              <div className="flex items-center gap-2">
-                <Checkbox id="remember" />
-                <Label htmlFor="remember">Remember me</Label>
-              </div>
-              <a
-                href="#"
-                className="text-sm text-cyan-700 hover:underline dark:text-cyan-500"
-              >
-                Lost Password?
+            </form>
+
+            <div className="w-full">
+              <a target="_blank" href={whatsappForLiveCoaching()}>
+                <div style={{ width: "60%" }} className="button-grad1">
+                  {" "}
+                  Send Message
+                </div>
               </a>
             </div>
+          </div>
+        </Modal.Body>
+      </Modal>
+      <Modal
+        show={openModalCounselling}
+        size="md"
+        onClose={onCloseModalCouncelling}
+        popup
+        className="custom-modal"
+      >
+        <Modal.Header className="modal-head" />
+        <Modal.Body className="modal-body">
+          <div className="space-y-6">
+            <h3 className="text-xl font-medium text-gray-900 dark:text-white">
+              Ask for One to One Conselling
+            </h3>
+            <form id="liveCoaching">
+              <div>
+                <div className="mb-2 block">
+                  <Label htmlFor="name" value="Your Name" />
+                </div>
+                <TextInput
+                  placeholder="Ex : James"
+                  id="name"
+                  type="text"
+                  value={nameCounselling}
+                  onInput={handleNameChangeCounselling}
+                  required
+                />
+
+                <div>
+                  <div className="mb-2 block">
+                    <Label htmlFor="query" value="Write your query" />
+                  </div>
+                  <Textarea
+                    className="px-2 py-2 text-base"
+                    id="query"
+                    value={queryCounselling}
+                    onChange={(event) =>
+                      setQueryCounselling(event.target.value)
+                    }
+                    required
+                    rows={3} // Set the number of rows as needed
+                    cols={30} // Set the number of columns as needed
+                  />
+                </div>
+              </div>
+            </form>
+
             <div className="w-full">
-              <Button>Log in to your account</Button>
-            </div>
-            <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
-              Not registered?&nbsp;
-              <a
-                href="#"
-                className="text-cyan-700 hover:underline dark:text-cyan-500"
-              >
-                Create account
+              <a target="_blank" href={whatsappForLiveCoachingCounselling()}>
+                <div style={{ width: "60%" }} className="button-grad1">
+                  {" "}
+                  Send Message
+                </div>
               </a>
             </div>
           </div>

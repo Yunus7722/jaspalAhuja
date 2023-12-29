@@ -24,6 +24,11 @@
   /* Add blur effect */
   /* filter: blur(2px); */
 }
+
+.navbar-logo-img{
+  /* width: 80%; */
+  width: 40%;
+}
 /* 
 .activeStyle{
    
@@ -133,9 +138,9 @@ button:hover {
   
 .navbar-Logo {
   color: whitesmoke;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   cursor: pointer;
-  font-weight: 700;
+  /* font-weight: 700; */
   font-family: serif;
   display: flex;
   flex-direction: column;
