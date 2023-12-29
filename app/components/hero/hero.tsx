@@ -497,7 +497,7 @@ export default function Intro() {
 
             <div className="w-full">
               <a target="_blank" href={whatsappForLiveCoaching()}>
-                <div style={{ width: "60%" }} className="button-grad1">
+                <div className="button-grad1 cust-width">
                   {" "}
                   Send Message
                 </div>
@@ -554,7 +554,7 @@ export default function Intro() {
 
             <div className="w-full">
               <a target="_blank" href={whatsappForLiveCoachingCounselling()}>
-                <div style={{ width: "60%" }} className="button-grad1">
+                <div  className="button-grad1 cust-width">
                   {" "}
                   Send Message
                 </div>

@@ -7,6 +7,10 @@
   background-position: center; /* Center the image within the container */
 }
 
+.cust-width{
+  width: 60%;
+}
+
 .paraText-start {
   color: black !important;
 }
@@ -465,6 +469,23 @@
 }
 
 @media screen and (max-width: 800px) {
+
+  
+.vector-cont-indi {
+  padding: 0rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 10rem; */
+}
+
+  .vector-img-cont {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+  }
   .w-main-circle {
     position: relative;
     width: 80vw;
@@ -555,7 +576,7 @@
     left: 0;
     width: 100%;
     /* 105+70  here adding overlay for throughout*/
-    height: 100rem;
+    height: 125rem;
     background-color: rgba(
       0,
       0,
@@ -578,7 +599,7 @@
 
   .intro {
     flex-direction: column;
-    height: 100rem;
+    height: 125rem;
     /* gap: 7rem; */
     width: 100%;
   }
@@ -598,8 +619,8 @@
     top: 34rem !important;
   }
   .i-right > img:nth-child(1) {
-    transform: scale(1.5);
-    margin-left: 6rem;
+    transform: scale(2);
+    margin-left: 10rem;
   }
   .i-right > img:nth-child(2) {
     /* transform: scale(1.5); */
@@ -629,4 +650,15 @@
     margin-left: 4.5rem;
     margin-top: 3rem;
   }
+
+  
+.add-container {
+  /* padding: 1rem; */
+  padding-left: 0rem;
+ flex-wrap: wrap;
+}
+
+.cust-width{
+  width: 80%;
+}
 }
