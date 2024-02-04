@@ -5,17 +5,17 @@ import "./offerings.css";
 
 const Solutions_and_services = () => {
   var applyText1 =
-    "Hi Ahuja i want to discuss regarding Counseling session regarding corporate trainings ";
+    "Hi Jas Ahuja, i want to discuss with you regarding Counselling session for corporate trainings ";
   var applyText2 =
-    "Hi Ahuja i want to discuss regarding Counseling session regarding Open Retreats ";
+    "Hi Jas Ahuja, i want to discuss with you regarding Counselling session for Open Retreats ";
   var applyText3 =
-    "Hi Ahuja i want to discuss regarding Counseling session regarding Retreats for Housewives ";
+    "Hi Jas Ahuja, i want to discuss with you regarding Counselling session for Retreats for Housewives ";
   var applyText4 =
-    "Hi Ahuja i want to discuss regarding Counseling session regarding  Retreats for Youngsters ";
+    "Hi Jas Ahuja, i want to discuss with you regarding Counselling session for Retreats for Youngsters ";
   var applyText5 =
-    "Hi Ahuja i want to discuss regarding Counseling session regarding  Retreats for T eachers ";
+    "Hi Jas Ahuja, i want to discuss with you regarding Counselling session for Retreats for Teachers ";
   var applyText6 =
-    "Hi Ahuja i want to discuss regarding Counseling session regarding  Retreats for Parents ";
+    "Hi Jas Ahuja, i want to discuss with you regarding Counselling session for Retreats for Parents ";
   return (
     <div id="offerings" className="mainContainer">
       <div className="mainHeader underline">Our Offerings</div>
@@ -41,7 +41,7 @@ const Solutions_and_services = () => {
           <p className="paraText" style={{ marginRight: "-2rem" }}>
             Productivity
           </p>
-          <p className="paraText">• Customized Training</p>
+          {/* <p className="paraText">• Customized Training</p> */}
           {/* <p className="paraText" style={{ marginRight: "-2rem" }}>
             
           </p> */}
@@ -130,7 +130,6 @@ const Solutions_and_services = () => {
           <p className="paraText" style={{ marginRight: "-2rem" }}>
             Life Detox
           </p>
-
           <a
             className="hyperLink"
             onClick={() => document.getElementById("my_modal_2").showModal()}
@@ -147,7 +146,8 @@ const Solutions_and_services = () => {
           >
             {" "}
             <div className="button i-button">Apply Here</div>
-          </a>        </div>
+          </a>{" "}
+        </div>
 
         {/* Open the modal using document.getElementById('ID').showModal() method */}
 
@@ -190,7 +190,6 @@ const Solutions_and_services = () => {
             SUTRAS
           </p>
           <p className="paraText">• Parenting Excellence</p>
-
           <a
             className="hyperLink"
             onClick={() => document.getElementById("my_modal_3").showModal()}
@@ -207,7 +206,8 @@ const Solutions_and_services = () => {
           >
             {" "}
             <div className="button i-button">Apply Here</div>
-          </a>        </div>
+          </a>{" "}
+        </div>
       </div>
 
       {/* Open the modal using document.getElementById('ID').showModal() method */}
@@ -247,7 +247,6 @@ const Solutions_and_services = () => {
       <div className="secondRow">
         <div className="cardMain">
           <h2 className="headerText">Retreats & Programs for Youngsters </h2>
-
           <p className="paraText">• Life Skills: financial literacy,</p>
           <p className="paraText" style={{ marginRight: "-2rem" }}>
             time management, and basic Skills.
@@ -260,7 +259,6 @@ const Solutions_and_services = () => {
           <p className="paraText" style={{ marginRight: "-2rem" }}>
             & building healthy relationships.
           </p>
-
           <a
             className="hyperLink"
             onClick={() => document.getElementById("my_modal_4").showModal()}
@@ -277,11 +275,11 @@ const Solutions_and_services = () => {
           >
             {" "}
             <div className="button i-button">Apply Here</div>
-          </a>        </div>
+          </a>{" "}
+        </div>
 
         <div className="cardMain">
           <h2 className="headerText">Retreats & Programs for Teachers </h2>
-
           <p className="paraText">• Life Skills: financial literacy,</p>
           <p className="paraText" style={{ marginRight: "-2rem" }}>
             time management, and basic Skills.
@@ -294,7 +292,6 @@ const Solutions_and_services = () => {
           <p className="paraText" style={{ marginRight: "-2rem" }}>
             & building healthy relationships.
           </p>
-
           <a
             className="hyperLink"
             onClick={() => document.getElementById("my_modal_4").showModal()}
@@ -311,11 +308,11 @@ const Solutions_and_services = () => {
           >
             {" "}
             <div className="button i-button">Apply Here</div>
-          </a>        </div>
+          </a>{" "}
+        </div>
 
         <div className="cardMain">
           <h2 className="headerText">Retreats & Programs for Parents </h2>
-
           <p className="paraText">• Life Skills: financial literacy,</p>
           <p className="paraText" style={{ marginRight: "-2rem" }}>
             time management, and basic Skills.
@@ -328,7 +325,6 @@ const Solutions_and_services = () => {
           <p className="paraText" style={{ marginRight: "-2rem" }}>
             & building healthy relationships.
           </p>
-
           <a
             className="hyperLink"
             onClick={() => document.getElementById("my_modal_4").showModal()}
@@ -345,7 +341,8 @@ const Solutions_and_services = () => {
           >
             {" "}
             <div className="button i-button">Apply Here</div>
-          </a>        </div>
+          </a>{" "}
+        </div>
 
         {/* Open the modal using document.getElementById('ID').showModal() method */}
 

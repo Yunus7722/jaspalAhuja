@@ -159,11 +159,11 @@ export default function Intro() {
       >
         <i className="fi fi-brands-whatsapp"></i>
       </a>
-      {/* <Link href="/components/products">
+      <Link href="/components/products">
         <div className="product-float">
           <div className="product-float-text">Our Products</div>
         </div>
-      </Link> */}
+      </Link>
       <div className="overlay"></div>
 
       <div className="i-left">
@@ -207,7 +207,7 @@ export default function Intro() {
                 <span
                   style={{
                     fontWeight: "bold",
-                    fontSize: "15px",
+                    fontSize: "18px",
                     fontStyle: "italic",
                     color: "black",
                   }}

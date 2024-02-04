@@ -211,7 +211,7 @@ transform: scale(1);
 /* Add WA floating button CSS */
 .floating-e {
   position: fixed;
-  width: 50px;
+  width: 40px;
   height: 40px;
   bottom: 40px;
   right: 20px;

@@ -11,6 +11,112 @@
   background-position: center; /* Center the image within the container */
 }
 
+
+.modal-head-r {
+  /* background: linear-gradient(to bottom left, #6a82fb, #fc5c7d); */
+  background-color: #2B86C5;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+} 
+.modal-body-r {
+  background-color: #FF3CAC;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+  
+
+  /* background: linear-gradient(to bottom right, #fc5c7d, #6a82fb); */
+}
+
+
+
+.cardMain-r {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  width: 30vw;
+  height: 31rem;
+  border-radius: 50px;
+  /* background-color: lightskyblue; */
+  background-color: #FF3CAC;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+  
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Add a transition for background color change */
+  transform: scale(0.8);
+  /* Initial scale down the container */
+  /* transform-origin: center; */
+  align-items: center;
+}
+
+
+.headerText-r {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: white;
+  margin-top: -0.1rem;
+}
+
+.headerText2-r {
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: white;
+  margin-top: -1.3rem;
+  margin-bottom: 1rem;
+}
+
+.paraText-r {
+  /* margin-top: -0.5rem; */
+  margin: 0;
+  margin-left: 1rem;
+  text-align: start;
+  /* align-self: center; */
+  /* justify-self: center; */
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: white;
+  width: 90%;
+}
+
+
+.r-button {
+  margin-top: 1.5rem;
+  background-color: #FBDA61;
+  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+  
+transition: 0.3s ease-in-out;
+}
+
+.r-button:hover {
+  margin-top: 1.5rem;
+  background-color: #FBDA61;
+  background-image: linear-gradient(45deg, #FF5ACD 0%, #FBDA61 100%);
+  transform: scale(1.1);
+}
+.retreat-center-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.left-retreat {
+  display: flex;
+  flex-direction: row;
+  flex: 8;
+}
+.right-retreat {
+  display: flex;
+  flex: 5;
+  flex-direction: row;
+}
+
 .retreatHeading {
   /* padding-left: 2rem; */
   margin-top: 2rem;
@@ -30,7 +136,21 @@
   /* margin-left: 13vw; */
   align-items: center;
   display: flex;
-  width: 70vw;
+  flex-direction: row;
+  width: 60vw;
+  height: 100vh;
+  /* border: 10px solid black; */
+  /* border-radius: 100px; */
+  /* height: 100vh; */
+  /* width: 80%; */
+}
+
+.carousal-container-apply {
+  /* margin-left: 13vw; */
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
   height: 100vh;
   /* border: 10px solid black; */
   /* border-radius: 100px; */
@@ -194,34 +314,42 @@
 
 @media screen and (max-width: 800px) {
 
-  
-.overlay-retreat {
-  position: absolute;
-  /* top: 10; */
-  left: 0;
-  width: 100%;
-  height: 25rem;
-  background: radial-gradient(circle at top left, rgb(65, 65, 95), transparent),
-    radial-gradient(circle at top right, rgb(65, 65, 95), transparent),
-    radial-gradient(circle at bottom left, rgb(65, 65, 95), transparent),
-    radial-gradient(circle at bottom right, rgb(65, 65, 95), transparent);
-  opacity: 0.2;
-  /* z-index: 0; */
-}
+  .left-retreat {
+    display: flex;
+    flex-direction: column;
+    flex: 8;
+  }
+  .overlay-retreat {
+    position: absolute;
+    /* top: 10; */
+    left: 0;
+    width: 100%;
+    height: 25rem;
+    background: radial-gradient(
+        circle at top left,
+        rgb(65, 65, 95),
+        transparent
+      ),
+      radial-gradient(circle at top right, rgb(65, 65, 95), transparent),
+      radial-gradient(circle at bottom left, rgb(65, 65, 95), transparent),
+      radial-gradient(circle at bottom right, rgb(65, 65, 95), transparent);
+    opacity: 0.2;
+    /* z-index: 0; */
+  }
 
   .retreat-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  
+
     width: 100%;
-    height: 25rem;
+    height: 50rem;
     background-image: url("../../img/bg5.jpg");
     background-size: cover; /* This ensures the image covers the entire container */
     background-position: center; /* Center the image within the container */
   }
-  
+
   .retreatHeading {
     /* padding-left: 2rem; */
     margin-top: 2rem;
@@ -229,15 +357,27 @@
     font-weight: 600;
     color: rgb(66, 11, 118);
   }
-  
+
   .imgCss {
     border-radius: 20px;
     height: 100%;
     width: 100%;
     object-fit: contain;
   }
-  
+
   .carousal-container {
+    /* margin-left: 13vw; */
+    align-items: center;
+    display: flex;
+    width: 90vw;
+    height: 10vh;
+    /* border: 10px solid black; */
+    /* border-radius: 100px; */
+    /* height: 100vh; */
+    /* width: 80%; */
+  }
+
+  .carousal-container-apply {
     /* margin-left: 13vw; */
     align-items: center;
     display: flex;
@@ -248,7 +388,7 @@
     /* height: 100vh; */
     /* width: 80%; */
   }
-  
+
   .heroMain {
     display: flex;
     height: 100vh;
@@ -277,6 +417,28 @@
     width: 40%;
     margin-left: 2rem;
   }
+  
+
+.cardMain-r {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  width: 95vw;
+  height: 35rem;
+  border-radius: 50px;
+  /* background-color: lightskyblue; */
+  background-color: #FF3CAC;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+  
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Add a transition for background color change */
+  transform: scale(0.8);
+  /* Initial scale down the container */
+  /* transform-origin: center; */
+  align-items: center;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -287,6 +449,12 @@
       font-family: 'Poppins', sans-serif;
       width: 60%;
   } */
+
+  .left-retreat {
+    display: flex;
+    flex-direction: column;
+    flex: 8;
+  }
 
   .learnButton {
     cursor: pointer;
@@ -306,6 +474,11 @@
 }
 
 @media screen and (max-width: 450px) {
+  .left-retreat {
+    display: flex;
+    flex-direction: column;
+    flex: 8;
+  }
   .stackText {
     font-size: 30px;
     padding: 2rem 2rem;
