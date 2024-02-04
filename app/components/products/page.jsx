@@ -205,7 +205,7 @@ function ModalBuy({ openModal, onCloseModal, generateSummaryText }) {
 
   const whatsappForProducts = () => {
     const whatsappBase = "https://wa.me/+919844290460";
-    const finalSummary = `Subject : Product Summary \nHi Jas Ahuja My name is ${name} and i would like to buy the respective products which are generated below\nMobile No : ${mobile}\n${generateSummaryText()}`;
+    const finalSummary = `Subject : Product Summary \n\nHi Jas Ahuja My name is ${name} and i would like to buy the respective products which are generated below\n\nMobile No : ${mobile}\n\n${generateSummaryText()}`;
     const encodedQuery = encodeURIComponent(`${finalSummary}`);
     return `${whatsappBase}?text=${encodedQuery}`;
   };
