@@ -9,7 +9,7 @@ function articleComponents() {
     <div className="article-main">
       <div className="articles-cont">
         <div className="article-cont hero-content lg:flex-row-reverse flex-col mx-10 my-10 rounded-3xl">
-          <Image src={img1} className="max-w-sm rounded-lg shadow-2xl" />
+          <Image alt="" src={img1} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">Box Office News!</h1>
             <p className="py-6">
@@ -21,7 +21,7 @@ function articleComponents() {
           </div>
         </div>
         <div className="article-cont hero-content lg:flex-row-reverse flex-col mx-10 my-10 rounded-3xl">
-          <Image src={img1} className="max-w-sm rounded-lg shadow-2xl" />
+          <Image alt=""  src={img1} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">Box Office News!</h1>
             <p className="py-6">
@@ -33,7 +33,7 @@ function articleComponents() {
           </div>
         </div>
         <div className="article-cont hero-content lg:flex-row-reverse flex-col mx-10 my-10 rounded-3xl">
-          <Image src={img1} className="max-w-sm rounded-lg shadow-2xl" />
+          <Image alt=""  src={img1} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">Box Office News!</h1>
             <p className="py-6">
@@ -45,7 +45,7 @@ function articleComponents() {
           </div>
         </div>
         <div className="article-cont hero-content lg:flex-row-reverse flex-col mx-10 my-10 rounded-3xl">
-          <Image src={img1} className="max-w-sm rounded-lg shadow-2xl" />
+          <Image alt=""  src={img1} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">Box Office News!</h1>
             <p className="py-6">

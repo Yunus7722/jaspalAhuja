@@ -15,12 +15,12 @@ function Books() {
         <input className="checkbox"  type="checkbox" id="c2" />
         <input className="checkbox"  type="checkbox" id="c3" />
         <div id="cover">
-          <Image  className="img-book"  src={img1} />
+          <Image alt=""   className="img-book"  src={img1} />
         </div>
         <div class="flip-book">
           <div class="flip" id="p1">
             <div class="back">
-              <Image  className="img-book"  src={img2} />
+              <Image alt=""   className="img-book"  src={img2} />
               <label class="back-btn" for="c1">
                 Back
               </label>
@@ -42,7 +42,7 @@ function Books() {
           </div>
           <div class="flip" id="p2">
             <div class="back">
-              <Image  className="img-book"  src={img3}/>
+              <Image alt=""   className="img-book"  src={img3}/>
               <label class="back-btn" for="c2">
                 Back
               </label>
@@ -66,7 +66,7 @@ function Books() {
 
           <div class="flip" id="p3">
             <div class="back">
-            <Image className="img-book" src={img4}/>
+            <Image alt=""  className="img-book" src={img4}/>
               <label class="back-btn" for="c3">
                 Back
               </label>

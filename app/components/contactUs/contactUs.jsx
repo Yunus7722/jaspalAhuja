@@ -7,7 +7,7 @@ import { useState } from "react";
 
 import img from "../../img/contact_us_.png";
 
-function contactUs() {
+function ContactUs() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -30,13 +30,13 @@ function contactUs() {
     window.open(whatsappUrl, "_blank");
   };
 
-  const triggerContactUs = () => {};
+  // const triggerContactUs = () => {};
 
   return (
     <div className="contact-container" id="Contact">
       <div className="contact-left">
         {/* <img style={{ width: "100%", height: "100%" }} src={img} alt="" /> */}
-        <Image
+        <Image alt="" 
           style={{
             width: "80%",
             height: "80%",
@@ -137,4 +137,4 @@ function contactUs() {
   );
 }
 
-export default contactUs;
+export default ContactUs;
