@@ -48,6 +48,7 @@
 
 
 .cust-modal-content {
+  user-select: none; 
   z-index: 99999;
   position: fixed;
   width: 300px;
@@ -68,6 +69,7 @@
   opacity: 0;
 }
 .cust-modal-content.active {
+  user-select: none; 
   background-color: #fbda61;
   background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
 
@@ -76,6 +78,7 @@
 }
 
 .cust-modal-content2 {
+  user-select: none; 
   z-index: 99999;
   position: fixed;
   width: 300px;
@@ -96,6 +99,7 @@
   opacity: 0;
 }
 .cust-modal-content2.active {
+  user-select: none; 
   background-color: #fbda61;
   background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
 
