@@ -32,7 +32,86 @@ import {
   Textarea,
 } from "flowbite-react";
 
+import CustomModal from "./customModal";
+import CustomModalBook from "./customModalBook";
 import Link from "next/link";
+
+
+// const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
+//   if (!isOpen) return null;
+//   return (
+//     <div
+//       className={isOpen ? "cust-modal-content active" : "cust-modal-content"}
+//     >
+//       <p>Hello Hye there</p>
+//       <button onClick={onClose}>Close</button>
+//     </div>
+//   );
+// };
+
+// const CustomModal: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
+//   const [shouldRender, setShouldRender] = useState(isOpen);
+//   const [isActive, setIsActive] = useState(isOpen);
+
+//   useEffect(() => {
+//     if (isOpen) {
+//       setShouldRender(true);
+//       requestAnimationFrame(() => setIsActive(true));
+//     } else {
+//       setIsActive(false);
+//       setTimeout(() => setShouldRender(false), 5000); // Match your transition duration
+//     }
+//   }, [isOpen]);
+
+//   if (!shouldRender) return null;
+
+//   return (
+//     <div className={`cust-modal-content ${isActive ? "active" : ""}`}>
+//       <p className="popup-header">Explore our Products</p>
+//       <div className="grand_cont">
+//         <div onClick={onClose} className="button-grad1 buy-button">
+//           close
+//         </div>
+//         <div className="hori-space"></div>
+//         <Link href="/components/products" className="button-grad1 buy-button">
+//           Open
+//         </Link>
+//       </div>
+//     </div>
+//   );
+// };
+
+// const CustomModalBook: React.FC<CustomModalProps> = ({ isOpen, onClose }) => {
+//   const [shouldRender, setShouldRender] = useState(isOpen);
+//   const [isActive, setIsActive] = useState(isOpen);
+
+//   useEffect(() => {
+//     if (isOpen) {
+//       setShouldRender(true);
+//       requestAnimationFrame(() => setIsActive(true));
+//     } else {
+//       setIsActive(false);
+//       setTimeout(() => setShouldRender(false), 5000); // Match your transition duration
+//     }
+//   }, [isOpen]);
+
+//   if (!shouldRender) return null;
+
+//   return (
+//     <div className={`cust-modal-content2 ${isActive ? "active" : ""}`}>
+//       <p className="popup-header">Explore our Books</p>
+//       <div className="grand_cont">
+//         <div onClick={onClose} className="button-grad1 buy-button">
+//           close
+//         </div>
+//         <div className="hori-space"></div>
+//         <Link href="/components/books" className="button-grad1 buy-button">
+//           Open
+//         </Link>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default function Intro() {
   // const [query, setQuery] = useState("Hello world");
@@ -147,6 +226,32 @@ export default function Intro() {
   var str2 = "Jaspal Singh Ahuja";
 
   const dynamicText = `Hi Jas, let's discuss`;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalBookOpen, setIsModalBookOpen] = useState(false);
+
+  useEffect(() => {
+    // Set a timer to open the first modal after 2 seconds
+    const timerModal = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 5000);
+
+    // Cleanup function to clear the timer if the component unmounts before the timer finishes
+    return () => clearTimeout(timerModal);
+  }, []);
+
+  useEffect(() => {
+    // Set a timer to open the second modal after 2 seconds
+    const timerModalBook = setTimeout(() => {
+      setIsModalBookOpen(true);
+    }, 6000);
+
+    // Cleanup function to clear the timer if the component unmounts before the timer finishes
+    return () => clearTimeout(timerModalBook);
+  }, []);
+
+  // Conditional rendering based on state
+  // if (!isModalOpen && !isModalBookOpen) return null;
+
   return (
     <div className="intro" id="Home">
       <a
@@ -331,64 +436,15 @@ export default function Intro() {
             <span>Milan Italy</span>
           </div>
         </div>
-
-        {/* <div className="circular-image-rect">
-          <div className="circ-text-cont">
-            <Image
-              src={img5}
-              style={{ objectFit: "cover", objectPosition: "50% 25%" }}
-              className="w-sec-circle"
-              alt={""}
-            />
-            <p className="loc-text underline">Sri Lanka</p>
-          </div>
-          <div className="circ-text-cont">
-            <Image
-              src={img3}
-              style={{ objectFit: "cover", objectPosition: "80% 50%" }}
-              className="w-sec-circle"
-              alt={""}
-            />
-            <p className="loc-text underline">Bali Indonesia</p>
-          </div>
-          <div className="circ-text-cont">
-            <Image
-              src={mal}
-              style={{ objectFit: "cover", objectPosition: "50% 25%" }}
-              className="w-sec-circle"
-              alt={""}
-            />
-            <p className="loc-text underline">Maldives</p>
-          </div>
-          <div className="circ-text-cont">
-            <Image
-              src={img4}
-              style={{ objectFit: "cover", objectPosition: "50% 25%" }}
-              className="w-sec-circle"
-              alt={""}
-            />
-            <p className="loc-text underline">Milan Italy</p>
-          </div>
-         
-        </div> */}
-
-        {/* <div
-          className=""
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            gap: "5rem",
-            marginLeft: "1.4rem",
-            marginTop: "-1rem",
-            color: "wheat",
-            fontWeight: "600s",
-          }}
-        >
-          <p>Sri Lanka</p>
-          <p>Bali Indonesia</p>
-          <p>maldives</p>
-          <p>Milan Italy</p>
-        </div> */}
+        {/* <button onClick={() => setIsModalOpen(true)}>Open Modal</button> */}
+        <CustomModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+        <CustomModalBook
+          isOpen={isModalBookOpen}
+          onClose={() => setIsModalBookOpen(false)}
+        />
 
         <div className="i-icons">
           <a style={{ textDecoration: "none", color: "inherit" }} href="">
@@ -497,10 +553,7 @@ export default function Intro() {
 
             <div className="w-full">
               <a target="_blank" href={whatsappForLiveCoaching()}>
-                <div className="button-grad1 cust-width">
-                  {" "}
-                  Send Message
-                </div>
+                <div className="button-grad1 cust-width"> Send Message</div>
               </a>
             </div>
           </div>
@@ -554,10 +607,7 @@ export default function Intro() {
 
             <div className="w-full">
               <a target="_blank" href={whatsappForLiveCoachingCounselling()}>
-                <div  className="button-grad1 cust-width">
-                  {" "}
-                  Send Message
-                </div>
+                <div className="button-grad1 cust-width"> Send Message</div>
               </a>
             </div>
           </div>
